@@ -1,0 +1,49 @@
+title: Your Site Title
+description: A short description of your site
+baseurl: ""
+url: https://username.github.io
+
+theme: cvless
+
+# site settings
+taglong: A longer tagline for your site
+tagshort: Short tagline
+cv: true
+
+# author settings
+author:
+  name: Your Name
+  email: you@example.com
+photo: assets/files/photo.jpg
+joblines:
+  - Organization or University
+  - Department
+  - 123 Main St, City, Country
+address: Building 1 Room 234
+phone: +1 234 567 890
+
+# profile links
+profile:
+  github: https://github.com/username
+  linkedin: https://www.linkedin.com/in/username
+  twitter: https://twitter.com/username
+
+# build settings
+permalink: pretty
+exclude:
+  - LICENSE
+  - README.md
+  - Gemfile
+  - vendor/
+  - docker-compose.yml
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate-v2
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  sourcemap: never
+  
