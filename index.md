@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Curriculum Vitae
+title: CV
 ---
 
 ## Personal Information
 
-- **Name:** Your Name
-- **Email:** your.email@example.com
-- **Phone:** +1 (234) 567-890
-- **Address:** Your City, Country
+- **Name:** Ömer Tekin
+- **Email:** omertekin2002@hotmail.com
+- **Phone:** +90 (538) 369 05 21
+- **Address:** Istanbul, Türkiye
 
 ## Education
 
