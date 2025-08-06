@@ -14,12 +14,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Only include pages explicitly listed here in the navigation.
-# An empty array hides all pages from the top navigation bar.
-header_pages:
-  - index.md
-
 # Social links
 github_username: your-github-username
 linkedin_username: your-linkedin-username
-
