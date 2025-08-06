@@ -1,4 +1,10 @@
 source "https://rubygems.org"
 
-gem 'cvless', '~> 2.7'
-gem 'erb', '~> 4.0', '>= 4.0.4' 
+gem "jekyll", "~> 4.3"
+
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-seo-tag", "~> 2.8"
+end
+
+gem "minima", "~> 2.5"
