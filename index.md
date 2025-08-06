@@ -1,18 +1,26 @@
 ---
-layout: home
-title: Home
+layout: page
+title: Curriculum Vitae
 ---
 
-# About
+## Personal Information
 
-Welcome to my personal CV website! This is where you can learn more about my professional background, skills, and experience.
+- **Name:** Your Name
+- **Email:** your.email@example.com
+- **Phone:** +1 (234) 567-890
+- **Address:** Your City, Country
 
-This is the home page. It can be used for a short introduction. [Click here](cv) to see the full CV, and [here](assets/files/cv.pdf) to download a print version. The theme also ships with a blog: [click here](posts) to scroll posts from the most recent. Finally, [click here](404) to see a page that can't be found.
+## Education
 
-By default, the theme only contains these few pages in order to stay lean and flexible. However, it can be easily extended to accommodate more pages, [collections](https://jekyllrb.com/docs/collections/), [categories, and tags](https://jekyllrb.com/docs/posts/#tags-and-categories).
+- **Degree**, University Name, 20XX–20XX
 
-Feel free to explore the different sections of this website to get a comprehensive view of my professional journey and accomplishments.
+## Experience
 
-Below is a list of blog posts included for illustrative purposes. Make sure to delete or modify them before deploying your website.
+- **Job Title**, Company Name — 20XX–20XX
+  - Brief description of responsibilities or achievements.
 
-{% include archive.html %} 
+## Skills
+
+- Skill one
+- Skill two
+- Skill three
