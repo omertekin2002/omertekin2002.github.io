@@ -9,7 +9,7 @@ url: "https://example.com"
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-tactile
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
