@@ -1,9 +1,9 @@
 # Site settings
 
-title: "Your Name"
-email: your.email@example.com
+title: "Ömer Tekin"
+email: omertekin2002@hotmail.com
 description: >-
-  A short description of your CV.
+  Hello
 baseurl: ""
 url: "https://example.com"
 
@@ -15,5 +15,5 @@ plugins:
   - jekyll-seo-tag
 
 # Social links
-github_username: your-github-username
-linkedin_username: your-linkedin-username
+github_username: omertekin2002
+linkedin_username: ömer-tekin
