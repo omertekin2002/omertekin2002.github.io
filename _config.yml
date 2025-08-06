@@ -4,6 +4,7 @@ baseurl: ""
 url: https://username.github.io
 
 remote_theme: piazzai/cvless
+theme: cvless
 
 # site settings
 taglong: A longer tagline for your site
@@ -41,6 +42,7 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-remote-theme
+  - jekyll-paginate-v2
   - jekyll-seo-tag
   - jekyll-sitemap
 
