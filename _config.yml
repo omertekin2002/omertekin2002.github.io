@@ -3,6 +3,7 @@ description: A short description of your site
 baseurl: ""
 url: https://username.github.io
 
+remote_theme: piazzai/cvless
 theme: cvless
 
 # site settings
@@ -40,6 +41,7 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-gist
+  - jekyll-remote-theme
   - jekyll-paginate-v2
   - jekyll-seo-tag
   - jekyll-sitemap
