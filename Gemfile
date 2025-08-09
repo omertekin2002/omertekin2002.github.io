@@ -6,4 +6,4 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-seo-tag", "~> 2.8"
 end
-gem "jekyll-theme-tactile", "~> 0.2.0"
+gem "jekyll-theme-dinky", "~> 0.2.0"
