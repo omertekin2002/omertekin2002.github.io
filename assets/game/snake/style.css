@@ -31,8 +31,12 @@ canvas {
 
 #score {
     margin-top: 15px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #a0a0a0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .menu {

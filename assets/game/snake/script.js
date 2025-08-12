@@ -12,9 +12,31 @@ let snake = [{ x: 10, y: 10 }];
 let food = {};
 let direction = 'right';
 let score = 0;
+let highScore = 0;
 let gameInterval;
 let gameSpeed = 150; // milliseconds
 let isGameOver = false;
+
+// Load high score from localStorage
+function loadHighScore() {
+    const saved = localStorage.getItem('snakeHighScore');
+    highScore = saved ? parseInt(saved) : 0;
+    updateScoreDisplay();
+}
+
+// Save high score to localStorage
+function saveHighScore() {
+    if (score > highScore) {
+        highScore = score;
+        localStorage.setItem('snakeHighScore', highScore);
+        updateScoreDisplay();
+    }
+}
+
+// Update score display to show both current and high score
+function updateScoreDisplay() {
+    scoreDisplay.innerHTML = `Score: ${score} | High Score: ${highScore}`;
+}
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -85,7 +107,7 @@ function moveSnake() {
     // Check if food is eaten
     if (head.x === food.x && head.y === food.y) {
         score++;
-        scoreDisplay.textContent = `Score: ${score}`;
+        updateScoreDisplay();
         generateFood();
         // Increase speed slightly
         gameSpeed = Math.max(50, gameSpeed - 5);
@@ -100,6 +122,11 @@ function moveSnake() {
 
 function changeDirection(event) {
     if (isGameOver) return;
+
+    // Prevent default scrolling behavior for arrow keys
+    if ([37, 38, 39, 40].includes(event.keyCode)) {
+        event.preventDefault();
+    }
 
     const keyPressed = event.keyCode;
     const LEFT = 37;
@@ -133,7 +160,7 @@ function startGame() {
     score = 0;
     gameSpeed = 150;
     isGameOver = false;
-    scoreDisplay.textContent = `Score: ${score}`;
+    updateScoreDisplay();
     startMenu.style.display = 'none';
     gameOverMenu.style.display = 'none';
     canvas.style.display = 'block';
@@ -148,7 +175,8 @@ function startGame() {
 function endGame() {
     isGameOver = true;
     clearInterval(gameInterval);
-    finalScoreDisplay.textContent = `Your Score: ${score}`;
+    saveHighScore();
+    finalScoreDisplay.innerHTML = `Your Score: ${score}<br>High Score: ${highScore}`;
     gameOverMenu.style.display = 'block';
     canvas.style.display = 'none';
     scoreDisplay.style.display = 'none';
@@ -160,6 +188,7 @@ restartButton.addEventListener('click', startGame);
 document.addEventListener('keydown', changeDirection);
 
 // Initial setup
+loadHighScore();
 canvas.style.display = 'none';
 scoreDisplay.style.display = 'none';
 startMenu.style.display = 'block';
