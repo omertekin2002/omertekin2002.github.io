@@ -9,9 +9,7 @@ title: CV
         <div class="nav-brand">Ömer Tekin</div>
         <ul class="nav-menu">
             <li><a href="#personal-info">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#cv">CV</a></li>
             <li><a href="#game">Game</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -37,49 +35,55 @@ title: CV
     </div>
 </section>
 
-<!-- Education Section -->
-<section id="education">
-    <h2>Education</h2>
-    <div class="section-content">
-        <div class="education-item">
-            <h3>Degree</h3>
-            <p>University Name, 20XX–20XX</p>
-        </div>
-    </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience">
-    <h2>Experience</h2>
-    <div class="section-content">
-        <div class="experience-item">
-            <h3>Job Title</h3>
-            <p class="company">Company Name — 20XX–20XX</p>
-            <p>Brief description of responsibilities or achievements.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="section-content">
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>Skill one</li>
-                    <li>Skill two</li>
-                    <li>Skill three</li>
-                </ul>
+<!-- CV Section -->
+<section id="cv">
+    <h2>Curriculum Vitae</h2>
+    <div class="cv-content">
+        <!-- Education Subsection -->
+        <div class="cv-subsection">
+            <h3>Education</h3>
+            <div class="subsection-content">
+                <div class="education-item">
+                    <h4>Degree</h4>
+                    <p>University Name, 20XX–20XX</p>
+                </div>
             </div>
-            <div class="skill-category">
-                <h3>Frameworks & Tools</h3>
-                <ul>
-                    <li>Framework one</li>
-                    <li>Framework two</li>
-                    <li>Tool one</li>
-                </ul>
+        </div>
+
+        <!-- Experience Subsection -->
+        <div class="cv-subsection">
+            <h3>Experience</h3>
+            <div class="subsection-content">
+                <div class="experience-item">
+                    <h4>Job Title</h4>
+                    <p class="company">Company Name — 20XX–20XX</p>
+                    <p>Brief description of responsibilities or achievements.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Subsection -->
+        <div class="cv-subsection">
+            <h3>Skills</h3>
+            <div class="subsection-content">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <ul>
+                            <li>Skill one</li>
+                            <li>Skill two</li>
+                            <li>Skill three</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frameworks & Tools</h4>
+                        <ul>
+                            <li>Framework one</li>
+                            <li>Framework two</li>
+                            <li>Tool one</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -207,18 +211,38 @@ section h2 {
     text-decoration: underline;
 }
 
-/* Section Content Styles */
-.section-content {
+/* CV Section Styles */
+.cv-content {
     background: rgba(58, 64, 77, 0.8);
     padding: 30px;
     border-radius: 10px;
     border: 1px solid rgba(97, 218, 251, 0.3);
 }
 
+.cv-subsection {
+    margin-bottom: 40px;
+}
+
+.cv-subsection:last-child {
+    margin-bottom: 0;
+}
+
+.cv-subsection h3 {
+    color: #61dafb;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(97, 218, 251, 0.3);
+    padding-bottom: 10px;
+}
+
+.subsection-content {
+    padding-left: 20px;
+}
+
 .education-item, .experience-item {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(97, 218, 251, 0.2);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(97, 218, 251, 0.1);
 }
 
 .education-item:last-child, .experience-item:last-child {
@@ -226,27 +250,29 @@ section h2 {
     margin-bottom: 0;
 }
 
-.education-item h3, .experience-item h3 {
+.education-item h4, .experience-item h4 {
     color: #61dafb;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
 }
 
 .company {
     color: #a0a0a0;
     font-style: italic;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 /* Skills Styles */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
-.skill-category h3 {
+.skill-category h4 {
     color: #61dafb;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    font-size: 1rem;
 }
 
 .skill-category ul {
@@ -256,10 +282,18 @@ section h2 {
 
 .skill-category li {
     background: rgba(97, 218, 251, 0.1);
-    margin: 8px 0;
-    padding: 10px 15px;
+    margin: 6px 0;
+    padding: 8px 12px;
     border-radius: 5px;
     border-left: 3px solid #61dafb;
+}
+
+/* Section Content Styles */
+.section-content {
+    background: rgba(58, 64, 77, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(97, 218, 251, 0.3);
 }
 
 /* Contact Styles */
@@ -313,6 +347,10 @@ section h2 {
     
     .info-grid, .skills-grid, .contact-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .subsection-content {
+        padding-left: 10px;
     }
 }
 
