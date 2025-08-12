@@ -41,15 +41,81 @@ function updateScoreDisplay() {
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw snake
-    ctx.fillStyle = 'lime';
-    snake.forEach(segment => {
-        ctx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize, gridSize);
+    // Draw snake with modern gradient and rounded corners
+    snake.forEach((segment, index) => {
+        const x = segment.x * gridSize;
+        const y = segment.y * gridSize;
+        
+        // Create gradient for snake body
+        const gradient = ctx.createLinearGradient(x, y, x + gridSize, y + gridSize);
+        if (index === 0) {
+            // Head with different color
+            gradient.addColorStop(0, '#4ade80');
+            gradient.addColorStop(1, '#22c55e');
+        } else {
+            // Body with gradient
+            gradient.addColorStop(0, '#10b981');
+            gradient.addColorStop(1, '#059669');
+        }
+        
+        ctx.fillStyle = gradient;
+        
+        // Draw rounded rectangle for snake segments
+        const radius = 4;
+        ctx.beginPath();
+        ctx.moveTo(x + radius, y);
+        ctx.lineTo(x + gridSize - radius, y);
+        ctx.quadraticCurveTo(x + gridSize, y, x + gridSize, y + radius);
+        ctx.lineTo(x + gridSize, y + gridSize - radius);
+        ctx.quadraticCurveTo(x + gridSize, y + gridSize, x + gridSize - radius, y + gridSize);
+        ctx.lineTo(x + radius, y + gridSize);
+        ctx.quadraticCurveTo(x, y + gridSize, x, y + gridSize - radius);
+        ctx.lineTo(x, y + radius);
+        ctx.quadraticCurveTo(x, y, x + radius, y);
+        ctx.closePath();
+        ctx.fill();
+        
+        // Add subtle shadow
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+        ctx.shadowBlur = 4;
+        ctx.shadowOffsetX = 2;
+        ctx.shadowOffsetY = 2;
+        ctx.fill();
+        ctx.shadowColor = 'transparent';
     });
 
-    // Draw food
-    ctx.fillStyle = 'red';
-    ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize, gridSize);
+    // Draw food with modern design
+    if (food.x !== undefined && food.y !== undefined) {
+        const x = food.x * gridSize;
+        const y = food.y * gridSize;
+        
+        // Create gradient for food
+        const foodGradient = ctx.createRadialGradient(
+            x + gridSize/2, y + gridSize/2, 0,
+            x + gridSize/2, y + gridSize/2, gridSize/2
+        );
+        foodGradient.addColorStop(0, '#f87171');
+        foodGradient.addColorStop(1, '#dc2626');
+        
+        ctx.fillStyle = foodGradient;
+        
+        // Draw food as a circle
+        ctx.beginPath();
+        ctx.arc(x + gridSize/2, y + gridSize/2, gridSize/2 - 2, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Add glow effect
+        ctx.shadowColor = '#f87171';
+        ctx.shadowBlur = 15;
+        ctx.fill();
+        ctx.shadowColor = 'transparent';
+        
+        // Add shine effect
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+        ctx.beginPath();
+        ctx.arc(x + gridSize/3, y + gridSize/3, gridSize/6, 0, Math.PI * 2);
+        ctx.fill();
+    }
 }
 
 function generateFood() {

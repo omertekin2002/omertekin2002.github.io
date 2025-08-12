@@ -92,7 +92,6 @@ title: CV
 <!-- Game Section -->
 <section id="game" class="section">
     <div class="container">
-        <h2>Snake Game</h2>
         <div class="game-container">
             <iframe src="./assets/game/snake/index.html" width="450" height="600" frameborder="0" scrolling="no"></iframe>
         </div>
