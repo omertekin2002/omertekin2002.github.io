@@ -8,7 +8,7 @@ title: CV
     <div class="nav-container">
         <div class="nav-brand">Ömer Tekin</div>
         <ul class="nav-menu">
-            <li><a href="#personal-info">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#cv">CV</a></li>
             <li><a href="#game">Game</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -16,119 +16,138 @@ title: CV
     </div>
 </nav>
 
-<!-- Personal Information Section -->
-<section id="personal-info">
-    <h2>Personal Information</h2>
-    <div class="info-grid">
-        <div class="info-item">
-            <strong>Name:</strong> Ömer Tekin
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Ömer Tekin</h1>
+        <p class="hero-subtitle">Software Developer & Game Enthusiast</p>
+        <div class="hero-links">
+            <a href="mailto:omertekin2002@hotmail.com" class="hero-btn">Get in Touch</a>
+            <a href="#cv" class="hero-btn secondary">View CV</a>
         </div>
-        <div class="info-item">
-            <strong>Email:</strong> <a href="mailto:omertekin2002@hotmail.com">omertekin2002@hotmail.com</a>
-        </div>
-        <div class="info-item">
-            <strong>Phone:</strong> <a href="tel:+905383690521">+90 (538) 369 05 21</a>
-        </div>
-        <div class="info-item">
-            <strong>Location:</strong> Istanbul, Türkiye
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="card-icon">📍</div>
+                <h3>Location</h3>
+                <p>Istanbul, Türkiye</p>
+            </div>
+            <div class="about-card">
+                <div class="card-icon">📧</div>
+                <h3>Email</h3>
+                <p><a href="mailto:omertekin2002@hotmail.com">omertekin2002@hotmail.com</a></p>
+            </div>
+            <div class="about-card">
+                <div class="card-icon">📱</div>
+                <h3>Phone</h3>
+                <p><a href="tel:+905383690521">+90 (538) 369 05 21</a></p>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- CV Section -->
-<section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <div class="cv-content">
-        <!-- Education Subsection -->
-        <div class="cv-subsection">
-            <h3>Education</h3>
-            <div class="subsection-content">
-                <div class="education-item">
+<section id="cv" class="section">
+    <div class="container">
+        <h2>Experience & Skills</h2>
+        <div class="cv-grid">
+            <div class="cv-card">
+                <h3>Education</h3>
+                <div class="cv-item">
                     <h4>Degree</h4>
                     <p>University Name, 20XX–20XX</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Experience Subsection -->
-        <div class="cv-subsection">
-            <h3>Experience</h3>
-            <div class="subsection-content">
-                <div class="experience-item">
+            
+            <div class="cv-card">
+                <h3>Work Experience</h3>
+                <div class="cv-item">
                     <h4>Job Title</h4>
                     <p class="company">Company Name — 20XX–20XX</p>
                     <p>Brief description of responsibilities or achievements.</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Skills Subsection -->
-        <div class="cv-subsection">
-            <h3>Skills</h3>
-            <div class="subsection-content">
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Programming Languages</h4>
-                        <ul>
-                            <li>Skill one</li>
-                            <li>Skill two</li>
-                            <li>Skill three</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Frameworks & Tools</h4>
-                        <ul>
-                            <li>Framework one</li>
-                            <li>Framework two</li>
-                            <li>Tool one</li>
-                        </ul>
-                    </div>
+            
+            <div class="cv-card">
+                <h3>Technical Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Skill one</span>
+                    <span class="skill-tag">Skill two</span>
+                    <span class="skill-tag">Skill three</span>
+                    <span class="skill-tag">Framework one</span>
+                    <span class="skill-tag">Framework two</span>
+                    <span class="skill-tag">Tool one</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="section-content">
-        <div class="contact-grid">
-            <div class="contact-item">
-                <strong>Email:</strong> <a href="mailto:omertekin2002@hotmail.com">omertekin2002@hotmail.com</a>
-            </div>
-            <div class="contact-item">
-                <strong>Phone:</strong> <a href="tel:+905383690521">+90 (538) 369 05 21</a>
-            </div>
-            <div class="contact-item">
-                <strong>GitHub:</strong> <a href="https://github.com/omertekin2002" target="_blank">@omertekin2002</a>
-            </div>
-            <div class="contact-item">
-                <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ömer-tekin" target="_blank">ömer-tekin</a>
-            </div>
+<!-- Game Section -->
+<section id="game" class="section">
+    <div class="container">
+        <h2>Snake Game</h2>
+        <div class="game-container">
+            <iframe src="./assets/game/snake/index.html" width="450" height="600" frameborder="0" scrolling="no"></iframe>
         </div>
     </div>
 </section>
 
-<!-- Snake Game Section -->
-<section id="game">
-    <h2>Take a Break - Play Snake!</h2>
-    <div class="game-section">
-        <iframe src="./assets/game/snake/index.html" width="450" height="600" frameborder="0" scrolling="no"></iframe>
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="container">
+        <h2>Let's Connect</h2>
+        <div class="contact-grid">
+            <a href="mailto:omertekin2002@hotmail.com" class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p>omertekin2002@hotmail.com</p>
+            </a>
+            <a href="https://github.com/omertekin2002" target="_blank" class="contact-card">
+                <div class="contact-icon">🐙</div>
+                <h3>GitHub</h3>
+                <p>@omertekin2002</p>
+            </a>
+            <a href="https://linkedin.com/in/ömer-tekin" target="_blank" class="contact-card">
+                <div class="contact-icon">💼</div>
+                <h3>LinkedIn</h3>
+                <p>ömer-tekin</p>
+            </a>
+        </div>
     </div>
 </section>
 
-<!-- Navigation and Styling -->
+<!-- Modern Styling -->
 <style>
-/* Sticky Navigation Styles */
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fafafa;
+}
+
+/* Sticky Navigation */
 .sticky-nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(40, 44, 52, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid #61dafb;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: all 0.3s ease;
 }
@@ -136,221 +155,318 @@ title: CV
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 70px;
 }
 
 .nav-brand {
-    color: #61dafb;
+    color: #2563eb;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: -0.025em;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 30px;
+    gap: 32px;
 }
 
 .nav-menu li a {
-    color: #fff;
+    color: #64748b;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
     padding: 8px 16px;
-    border-radius: 20px;
+    border-radius: 8px;
 }
 
 .nav-menu li a:hover {
-    color: #61dafb;
-    background: rgba(97, 218, 251, 0.1);
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 24px 80px;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -0.025em;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+.hero-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.hero-btn:first-child {
+    background: white;
+    color: #2563eb;
+}
+
+.hero-btn:first-child:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn.secondary {
+    background: transparent;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.hero-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Section Styles */
-section {
-    padding: 80px 20px 40px;
+.section {
+    padding: 80px 0;
+}
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 24px;
 }
 
-section h2 {
-    color: #61dafb;
-    font-size: 2rem;
-    margin-bottom: 30px;
+.section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
     text-align: center;
-    border-bottom: 2px solid #61dafb;
-    padding-bottom: 10px;
+    margin-bottom: 48px;
+    color: #1e293b;
+    letter-spacing: -0.025em;
 }
 
-/* Personal Info Styles */
-.info-grid {
+/* About Section */
+.about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
 }
 
-.info-item {
-    background: rgba(58, 64, 77, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 4px solid #61dafb;
+.about-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
 }
 
-.info-item a {
-    color: #61dafb;
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.about-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1e293b;
+}
+
+.about-card p {
+    color: #64748b;
+}
+
+.about-card a {
+    color: #2563eb;
     text-decoration: none;
 }
 
-.info-item a:hover {
+.about-card a:hover {
     text-decoration: underline;
 }
 
-/* CV Section Styles */
-.cv-content {
-    background: rgba(58, 64, 77, 0.8);
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid rgba(97, 218, 251, 0.3);
+/* CV Section */
+.cv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
 }
 
-.cv-subsection {
-    margin-bottom: 40px;
+.cv-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.cv-subsection:last-child {
-    margin-bottom: 0;
-}
-
-.cv-subsection h3 {
-    color: #61dafb;
+.cv-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(97, 218, 251, 0.3);
-    padding-bottom: 10px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #1e293b;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
 }
 
-.subsection-content {
-    padding-left: 20px;
-}
-
-.education-item, .experience-item {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(97, 218, 251, 0.1);
-}
-
-.education-item:last-child, .experience-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.education-item h4, .experience-item h4 {
-    color: #61dafb;
+.cv-item h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
     margin-bottom: 8px;
-    font-size: 1.1rem;
+    color: #2563eb;
+}
+
+.cv-item p {
+    color: #64748b;
+    margin-bottom: 8px;
 }
 
 .company {
-    color: #a0a0a0;
+    color: #94a3b8;
     font-style: italic;
-    margin-bottom: 8px;
 }
 
-/* Skills Styles */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-.skill-category h4 {
-    color: #61dafb;
-    margin-bottom: 12px;
-    font-size: 1rem;
+.skill-tag {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
 }
 
-.skill-category ul {
-    list-style: none;
-    padding: 0;
+/* Game Section */
+.game-container {
+    text-align: center;
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.skill-category li {
-    background: rgba(97, 218, 251, 0.1);
-    margin: 6px 0;
-    padding: 8px 12px;
-    border-radius: 5px;
-    border-left: 3px solid #61dafb;
-}
-
-/* Section Content Styles */
-.section-content {
-    background: rgba(58, 64, 77, 0.8);
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid rgba(97, 218, 251, 0.3);
-}
-
-/* Contact Styles */
+/* Contact Section */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
 }
 
-.contact-item {
-    background: rgba(97, 218, 251, 0.1);
-    padding: 20px;
-    border-radius: 10px;
+.contact-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
     text-align: center;
-    border: 1px solid rgba(97, 218, 251, 0.3);
-}
-
-.contact-item a {
-    color: #61dafb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     text-decoration: none;
-    font-weight: 500;
+    color: inherit;
+    transition: all 0.2s ease;
 }
 
-.contact-item a:hover {
-    text-decoration: underline;
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Game Section Styles */
-.game-section {
-    text-align: center;
-    background: rgba(58, 64, 77, 0.8);
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid rgba(97, 218, 251, 0.3);
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.contact-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1e293b;
+}
+
+.contact-card p {
+    color: #64748b;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .hero-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .nav-menu {
-        gap: 15px;
+        gap: 16px;
     }
     
     .nav-menu li a {
         padding: 6px 12px;
-        font-size: 0.9rem;
+        font-size: 0.875rem;
     }
     
-    section {
-        padding: 70px 15px 30px;
+    .section {
+        padding: 60px 0;
     }
     
-    .info-grid, .skills-grid, .contact-grid {
+    .section h2 {
+        font-size: 2rem;
+        margin-bottom: 32px;
+    }
+    
+    .about-grid, .cv-grid, .contact-grid {
         grid-template-columns: 1fr;
     }
     
-    .subsection-content {
-        padding-left: 10px;
+    .cv-card {
+        padding: 24px;
     }
 }
 
@@ -359,8 +475,8 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Body padding to account for fixed header */
+/* Body padding for fixed header */
 body {
-    padding-top: 60px;
+    padding-top: 70px;
 }
 </style>
