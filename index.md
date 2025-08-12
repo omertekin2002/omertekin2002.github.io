@@ -15,23 +15,7 @@ title: CV
     </div>
 </nav>
 
-<!-- Emoji Favicon: Alien Monster -->
-<script>
-(function() {
-  try {
-    var svg = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='56'>👾</text></svg>";
-    var link = document.createElement('link');
-    link.setAttribute('rel', 'icon');
-    link.setAttribute('type', 'image/svg+xml');
-    link.setAttribute('href', 'data:image/svg+xml,' + encodeURIComponent(svg));
-    var existing = document.head.querySelector("link[rel='icon']");
-    if (existing) existing.remove();
-    document.head.appendChild(link);
-  } catch (e) {
-    // no-op
-  }
-})();
-</script>
+
 
 <!-- Hero Section -->
 <section class="hero">
