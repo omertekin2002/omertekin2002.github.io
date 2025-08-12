@@ -24,3 +24,10 @@ title: CV
 - Skill one
 - Skill two
 - Skill three
+
+<br>
+<br>
+<br>
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <iframe src="./assets/game/snake/index.html" width="450" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
