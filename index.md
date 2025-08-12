@@ -124,6 +124,21 @@ title: CV
 
 <!-- Modern Styling -->
 <style>
+/* Hide Jekyll Dinky Theme Header */
+header, .header, .site-header, .site-title, .site-nav, .site-nav ul, .site-nav li {
+    display: none !important;
+}
+
+/* Remove any theme-generated header spacing */
+body {
+    padding-top: 0 !important;
+}
+
+/* Ensure our custom navigation is properly positioned */
+.sticky-nav {
+    top: 0 !important;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
