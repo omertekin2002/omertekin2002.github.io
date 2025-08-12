@@ -10,6 +10,42 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | relative_url }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}" />
     <link rel="manifest" href="{{ '/assets/site.webmanifest' | relative_url }}" />
+    <script>
+      (function() {
+        try {
+          var size = 32;
+          var dpr = window.devicePixelRatio || 1;
+          var canvas = document.createElement('canvas');
+          canvas.width = size * dpr;
+          canvas.height = size * dpr;
+          var ctx = canvas.getContext('2d');
+          ctx.scale(dpr, dpr);
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.font = (size - 4) + "px system-ui, -apple-system, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif";
+          ctx.fillText('👾', size / 2, size / 2 + 1);
+          var url = canvas.toDataURL('image/png');
+          var pngLink = document.querySelector("link[rel='icon'][type='image/png']");
+          if (!pngLink) {
+            pngLink = document.createElement('link');
+            pngLink.rel = 'icon';
+            pngLink.type = 'image/png';
+            pngLink.sizes = size + 'x' + size;
+            document.head.appendChild(pngLink);
+          }
+          pngLink.href = url;
+          // Also set shortcut icon for some browsers
+          var shortcut = document.querySelector("link[rel='shortcut icon']");
+          if (!shortcut) {
+            shortcut = document.createElement('link');
+            shortcut.rel = 'shortcut icon';
+            shortcut.type = 'image/png';
+            document.head.appendChild(shortcut);
+          }
+          shortcut.href = url;
+        } catch (e) { /* ignore */ }
+      })();
+    </script>
   </head>
   <body>
     {{ content }}
