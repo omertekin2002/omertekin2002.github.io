@@ -11,7 +11,6 @@ title: CV
             <li><a href="#about">About</a></li>
             <li><a href="#cv">CV</a></li>
             <li><a href="#game">Game</a></li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -24,6 +23,26 @@ title: CV
         <div class="hero-links">
             <a href="mailto:omertekin2002@hotmail.com" class="hero-btn">Get in Touch</a>
             <a href="#cv" class="hero-btn secondary">View CV</a>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/omertekin2002" target="_blank" class="social-link">
+                <span class="social-icon">🐙</span>
+                <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/ömer-tekin" target="_blank" class="social-link">
+                <span class="social-icon">💼</span>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/omertekin2002" target="_blank" class="social-link">
+                <span class="social-icon">🐙</span>
+                <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/ömer-tekin" target="_blank" class="social-link">
+                <span class="social-icon">💼</span>
+                <span>LinkedIn</span>
+            </a>
         </div>
     </div>
 </section>
@@ -94,30 +113,6 @@ title: CV
     <div class="container">
         <div class="game-container">
             <iframe src="./assets/game/snake/index.html" width="450" height="600" frameborder="0" scrolling="no"></iframe>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="section">
-    <div class="container">
-        <h2>Let's Connect</h2>
-        <div class="contact-grid">
-            <a href="mailto:omertekin2002@hotmail.com" class="contact-card">
-                <div class="contact-icon">📧</div>
-                <h3>Email</h3>
-                <p>omertekin2002@hotmail.com</p>
-            </a>
-            <a href="https://github.com/omertekin2002" target="_blank" class="contact-card">
-                <div class="contact-icon">🐙</div>
-                <h3>GitHub</h3>
-                <p>@omertekin2002</p>
-            </a>
-            <a href="https://linkedin.com/in/ömer-tekin" target="_blank" class="contact-card">
-                <div class="contact-icon">💼</div>
-                <h3>LinkedIn</h3>
-                <p>ömer-tekin</p>
-            </a>
         </div>
     </div>
 </section>
@@ -268,6 +263,43 @@ body {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
+/* Social Links in Hero */
+.social-links {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    font-size: 1.2rem;
+}
+
+.social-link span:last-child {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
 /* Section Styles */
 .section {
     padding: 80px 0;
@@ -402,45 +434,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Contact Section */
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-}
 
-.contact-card {
-    background: white;
-    padding: 32px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.2s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-.contact-icon {
-    font-size: 2.5rem;
-    margin-bottom: 16px;
-}
-
-.contact-card h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 12px;
-    color: #1e293b;
-}
-
-.contact-card p {
-    color: #64748b;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -475,7 +469,7 @@ body {
         margin-bottom: 32px;
     }
     
-    .about-grid, .cv-grid, .contact-grid {
+    .about-grid, .cv-grid {
         grid-template-columns: 1fr;
     }
     
