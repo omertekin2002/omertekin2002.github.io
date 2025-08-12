@@ -34,16 +34,6 @@ title: CV
                 <span>LinkedIn</span>
             </a>
         </div>
-        <div class="social-links">
-            <a href="https://github.com/omertekin2002" target="_blank" class="social-link">
-                <span class="social-icon">🐙</span>
-                <span>GitHub</span>
-            </a>
-            <a href="https://linkedin.com/in/ömer-tekin" target="_blank" class="social-link">
-                <span class="social-icon">💼</span>
-                <span>LinkedIn</span>
-            </a>
-        </div>
     </div>
 </section>
 
