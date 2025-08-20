@@ -5,11 +5,10 @@ email: omertekin2002@hotmail.com
 description: >-
   Hello
 baseurl: ""
-url: "https://example.com"
+url: "https://omertekin2002.github.io"
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-dinky
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

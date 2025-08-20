@@ -25,13 +25,14 @@ title: CV
         <div class="hero-links">
             <a href="mailto:omertekin2002@hotmail.com" class="hero-btn">Get in Touch</a>
             <a href="#cv" class="hero-btn secondary">View CV</a>
+            <a href="{{ '/assets/files/cv.pdf' | relative_url }}" class="hero-btn secondary" download="Omer_Tekin_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
         </div>
         <div class="social-links">
             <a href="https://github.com/omertekin2002" target="_blank" class="social-link">
                 <span class="social-icon">🐙</span>
                 <span>GitHub</span>
             </a>
-            <a href="https://linkedin.com/in/ömer-tekin" target="_blank" class="social-link">
+            <a href="https://linkedin.com/in/%C3%B6mer-tekin" target="_blank" class="social-link">
                 <span class="social-icon">💼</span>
                 <span>LinkedIn</span>
             </a>
