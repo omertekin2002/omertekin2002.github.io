@@ -21,11 +21,7 @@ title: CV
 <section class="hero">
     <div class="hero-content">
         <h1>Ömer Tekin</h1>
-<<<<<<< HEAD
-        <p class="hero-subtitle">Law § Business Enthusiast</p>
-=======
         <p class="hero-subtitle">Law & Business Enthusiast</p>
->>>>>>> eb30d26a72cb6b5413d1e6534524eb2401cdf165
         <div class="hero-links">
             <a href="mailto:omertekin2002@hotmail.com" class="hero-btn">Get in Touch</a>
             <a href="#cv" class="hero-btn secondary">View CV</a>
@@ -436,7 +432,7 @@ body {
 /* Responsive iframe wrapper for the game */
 .game-embed {
     width: 100%;
-    max-width: 100%;
+    max-width: min(96vw, 85vh, 1600px);
     margin: 0 auto;
 }
 
@@ -447,11 +443,17 @@ body {
     display: block;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    max-height: 85vh;
 }
 
 /* Allow the game section to use more horizontal space */
 #game .container {
     max-width: min(96vw, 1600px);
+}
+
+/* Slightly reduce vertical padding for the game section */
+#game.section {
+    padding: 60px 0;
 }
 
 

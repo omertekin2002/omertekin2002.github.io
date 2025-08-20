@@ -263,7 +263,7 @@ startMenu.style.display = 'block';
 // Responsive canvas sizing based on parent container
 function resizeCanvas() {
     const container = canvas.parentElement;
-    const size = Math.min(container.clientWidth, window.innerHeight * 0.8);
+    const size = Math.min(container.clientWidth, window.innerHeight * 0.75);
     // choose grid size to keep integer pixel sizes for cells
     gridSize = Math.floor(size / gridCount);
     const pixelSize = gridSize * gridCount;
