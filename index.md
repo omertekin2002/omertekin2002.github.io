@@ -21,7 +21,11 @@ title: CV
 <section class="hero">
     <div class="hero-content">
         <h1>Ömer Tekin</h1>
+<<<<<<< HEAD
         <p class="hero-subtitle">Law § Business Enthusiast</p>
+=======
+        <p class="hero-subtitle">Law & Business Enthusiast</p>
+>>>>>>> eb30d26a72cb6b5413d1e6534524eb2401cdf165
         <div class="hero-links">
             <a href="mailto:omertekin2002@hotmail.com" class="hero-btn">Get in Touch</a>
             <a href="#cv" class="hero-btn secondary">View CV</a>
