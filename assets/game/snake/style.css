@@ -19,6 +19,8 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 .game-container::before {
@@ -123,11 +125,6 @@ button:active {
     .game-container {
         padding: 24px;
         margin: 16px;
-    }
-    
-    canvas {
-        width: 320px;
-        height: 320px;
     }
     
     .menu h2 {

@@ -7,7 +7,8 @@ const gameOverMenu = document.getElementById('gameOverMenu');
 const finalScoreDisplay = document.getElementById('finalScore');
 const restartButton = document.getElementById('restartButton');
 
-const gridSize = 20;
+let gridSize = 20;
+let gridCount = 20; // number of cells per axis; canvas will be sized to gridCount * gridSize
 let snake = [{ x: 10, y: 10 }];
 let food = {};
 let direction = 'right';
@@ -120,8 +121,8 @@ function draw() {
 
 function generateFood() {
     food = {
-        x: Math.floor(Math.random() * (canvas.width / gridSize)),
-        y: Math.floor(Math.random() * (canvas.height / gridSize))
+        x: Math.floor(Math.random() * gridCount),
+        y: Math.floor(Math.random() * gridCount)
     };
 
     // Ensure food doesn't spawn on snake
@@ -154,8 +155,8 @@ function moveSnake() {
     }
 
     // Check for collision with walls
-    if (head.x < 0 || head.x >= canvas.width / gridSize ||
-        head.y < 0 || head.y >= canvas.height / gridSize) {
+    if (head.x < 0 || head.x >= gridCount ||
+        head.y < 0 || head.y >= gridCount) {
         endGame();
         return;
     }
@@ -221,7 +222,7 @@ function gameLoop() {
 }
 
 function startGame() {
-    snake = [{ x: 10, y: 10 }];
+    snake = [{ x: Math.floor(gridCount / 2), y: Math.floor(gridCount / 2) }];
     direction = 'right';
     score = 0;
     gameSpeed = 150;
@@ -258,3 +259,19 @@ loadHighScore();
 canvas.style.display = 'none';
 scoreDisplay.style.display = 'none';
 startMenu.style.display = 'block';
+
+// Responsive canvas sizing based on parent container
+function resizeCanvas() {
+    const container = canvas.parentElement;
+    const size = Math.min(container.clientWidth, window.innerHeight * 0.8);
+    // choose grid size to keep integer pixel sizes for cells
+    gridSize = Math.floor(size / gridCount);
+    const pixelSize = gridSize * gridCount;
+    canvas.width = pixelSize;
+    canvas.height = pixelSize;
+    draw();
+}
+
+window.addEventListener('resize', resizeCanvas);
+// Ensure size is correct once DOM is ready
+setTimeout(resizeCanvas, 0);

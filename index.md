@@ -105,7 +105,9 @@ title: CV
 <section id="game" class="section">
     <div class="container">
         <div class="game-container">
-            <iframe src="./assets/game/snake/index.html" width="450" height="600" frameborder="0" scrolling="no"></iframe>
+            <div class="game-embed">
+                <iframe src="{{ '/assets/game/snake/index.html' | relative_url }}" loading="lazy" referrerpolicy="no-referrer"></iframe>
+            </div>
         </div>
     </div>
 </section>
@@ -425,6 +427,27 @@ body {
     border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive iframe wrapper for the game */
+.game-embed {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.game-embed iframe {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 0;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Allow the game section to use more horizontal space */
+#game .container {
+    max-width: min(96vw, 1600px);
 }
 
 
