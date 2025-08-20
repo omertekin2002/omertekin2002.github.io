@@ -8,7 +8,6 @@ title: CV
     <div class="nav-container">
         <div class="nav-brand">Ömer Tekin</div>
         <ul class="nav-menu">
-            <li><a href="#about">About</a></li>
             <li><a href="#cv">CV</a></li>
             <li><a href="#game">Game</a></li>
         </ul>
@@ -24,7 +23,6 @@ title: CV
         <p class="hero-subtitle">Law & Business Enthusiast</p>
         <div class="hero-links">
             <a href="mailto:omertekin2002@hotmail.com" class="hero-btn">Get in Touch</a>
-            <a href="#cv" class="hero-btn secondary">View CV</a>
             <a href="{{ '/assets/Omer%20Tekin%20CV%20n.pdf' | relative_url }}" class="hero-btn secondary" download="Omer_Tekin_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
         </div>
         <div class="social-links">
@@ -40,29 +38,7 @@ title: CV
     </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="section">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="about-grid">
-            <div class="about-card">
-                <div class="card-icon">📍</div>
-                <h3>Location</h3>
-                <p>Istanbul, Türkiye</p>
-            </div>
-            <div class="about-card">
-                <div class="card-icon">📧</div>
-                <h3>Email</h3>
-                <p><a href="mailto:omertekin2002@hotmail.com">omertekin2002@hotmail.com</a></p>
-            </div>
-            <div class="about-card">
-                <div class="card-icon">📱</div>
-                <h3>Phone</h3>
-                <p><a href="tel:+905383690521">+90 (538) 369 05 21</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+ 
 
 <!-- CV Section -->
 <section id="cv" class="section">
@@ -315,52 +291,7 @@ body {
     letter-spacing: -0.025em;
 }
 
-/* About Section */
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-}
-
-.about-card {
-    background: white;
-    padding: 32px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease;
-}
-
-.about-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-.card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 16px;
-}
-
-.about-card h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 12px;
-    color: #1e293b;
-}
-
-.about-card p {
-    color: #64748b;
-}
-
-.about-card a {
-    color: #2563eb;
-    text-decoration: none;
-}
-
-.about-card a:hover {
-    text-decoration: underline;
-}
+/* About section styles removed */
 
 /* CV Section */
 .cv-grid {
