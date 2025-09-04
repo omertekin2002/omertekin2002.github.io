@@ -342,6 +342,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 32px;
+    align-items: start;
 }
 
 .cv-card {
