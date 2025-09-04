@@ -343,6 +343,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 32px;
     align-items: start;
+    grid-auto-flow: row dense;
 }
 
 .cv-card {
