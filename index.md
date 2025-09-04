@@ -339,17 +339,18 @@ body {
 
 /* CV Section */
 /* Masonry layout: use columns in WebKit/Firefox; fallback to CSS grid in Chrome */
+
+/* Masonry-like layout using CSS columns */
 .cv-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    align-items: start;
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 24px;
+       -moz-column-gap: 24px;
+            column-gap: 24px;
 }
 
-@supports (column-width: 320px) and (break-inside: avoid) {
-    /* Disable column masonry to keep cross-browser consistent ordering */
-    .cv-grid { display: grid; }
-}
+.cv-card { display: inline-block; width: 100%; break-inside: avoid; margin: 0 0 24px; }
 
 /* Force the column order using nth-of-type fallbacks on wide screens */
 @media (min-width: 1200px) {
@@ -370,36 +371,13 @@ body {
 
 /* Responsive column count fallbacks */
 @media (max-width: 1100px) {
-    .cv-grid { grid-template-columns: repeat(2, 1fr); }
+    .cv-grid { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; }
 }
 @media (max-width: 640px) {
-    .cv-grid { grid-template-columns: 1fr; }
+    .cv-grid { -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; }
 }
 
-/* Explicit desktop layout: Education | Experience | Certifications, then Skills under Education */
-.cv-card.education { grid-column: 1; grid-row: 1; }
-.cv-card.experience { grid-column: 2; grid-row: 1; }
-.cv-card.certifications { grid-column: 3; grid-row: 1; }
-.cv-card.skills { grid-column: 1; grid-row: 2; }
-
-/* Two-column layout adjustments */
-@media (max-width: 1100px) {
-    .cv-card.education { grid-column: 1; grid-row: 1; }
-    .cv-card.experience { grid-column: 2; grid-row: 1; }
-    .cv-card.skills { grid-column: 1; grid-row: 2; }
-    .cv-card.certifications { grid-column: 2; grid-row: 2; }
-}
-
-/* One-column layout resets */
-@media (max-width: 640px) {
-    .cv-card.education,
-    .cv-card.experience,
-    .cv-card.skills,
-    .cv-card.certifications {
-        grid-column: auto;
-        grid-row: auto;
-    }
-}
+/* Remove explicit grid placement to allow natural stacking under columns */
 
 .cv-card h3 {
     font-size: 1.5rem;
