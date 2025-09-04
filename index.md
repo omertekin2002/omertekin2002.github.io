@@ -41,6 +41,7 @@ title: CV
     <div class="container">
         <h2>Experience & Skills</h2>
         <div class="cv-grid">
+            <div class="cv-column left-col">
             <div class="cv-card education">
                 <h3>Education</h3>
                 <div class="cv-item">
@@ -64,6 +65,7 @@ title: CV
                     <span class="skill-tag">Office Suite</span>
                     <span class="skill-tag">MCP Integration</span>
                 </div>
+            </div>
             </div>
 
             <div class="cv-card experience">
@@ -359,12 +361,16 @@ body {
 
 /* Explicit placement desktop */
 .cv-card.education { grid-column: 1; grid-row: 1; }
+.left-col { display: contents; }
+.left-col > .cv-card { grid-column: 1; }
+.cv-card.education { grid-column: 1; grid-row: 1; }
+.cv-card.skills { grid-column: 1; grid-row: 2; }
 .cv-card.experience { grid-column: 2; grid-row: 1; }
 .cv-card.certifications { grid-column: 3; grid-row: 1; }
-.cv-card.skills { grid-column: 1; grid-row: 2; }
 
 /* 2-col placement */
 @media (max-width: 1100px) {
+  .left-col > .cv-card { grid-column: auto; }
   .cv-card.education { grid-column: 1; grid-row: 1; }
   .cv-card.experience { grid-column: 2; grid-row: 1; }
   .cv-card.skills { grid-column: 1; grid-row: 2; }
