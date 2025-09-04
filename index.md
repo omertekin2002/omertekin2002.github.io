@@ -341,23 +341,14 @@ body {
 /* Masonry layout: use columns in WebKit/Firefox; fallback to CSS grid in Chrome */
 .cv-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
+    align-items: start;
 }
 
 @supports (column-width: 320px) and (break-inside: avoid) {
-    .cv-grid {
-        display: block;
-        -webkit-column-width: 320px;
-           -moz-column-width: 320px;
-                column-width: 320px;
-        -webkit-column-gap: 24px;
-           -moz-column-gap: 24px;
-                column-gap: 24px;
-        -webkit-column-fill: balance;
-                column-fill: balance;
-    }
-    .cv-card { display: inline-block; width: 100%; break-inside: avoid; margin: 0 0 24px; }
+    /* Disable column masonry to keep cross-browser consistent ordering */
+    .cv-grid { display: grid; }
 }
 
 /* Force the column order using nth-of-type fallbacks on wide screens */
@@ -383,6 +374,31 @@ body {
 }
 @media (max-width: 640px) {
     .cv-grid { grid-template-columns: 1fr; }
+}
+
+/* Explicit desktop layout: Education | Experience | Certifications, then Skills under Education */
+.cv-card.education { grid-column: 1; grid-row: 1; }
+.cv-card.experience { grid-column: 2; grid-row: 1; }
+.cv-card.certifications { grid-column: 3; grid-row: 1; }
+.cv-card.skills { grid-column: 1; grid-row: 2; }
+
+/* Two-column layout adjustments */
+@media (max-width: 1100px) {
+    .cv-card.education { grid-column: 1; grid-row: 1; }
+    .cv-card.experience { grid-column: 2; grid-row: 1; }
+    .cv-card.skills { grid-column: 1; grid-row: 2; }
+    .cv-card.certifications { grid-column: 2; grid-row: 2; }
+}
+
+/* One-column layout resets */
+@media (max-width: 640px) {
+    .cv-card.education,
+    .cv-card.experience,
+    .cv-card.skills,
+    .cv-card.certifications {
+        grid-column: auto;
+        grid-row: auto;
+    }
 }
 
 .cv-card h3 {
