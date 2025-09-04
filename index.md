@@ -54,7 +54,7 @@ title: CV
             </div>
             
             <div class="cv-card">
-                <h3>Work Experience</h3>
+                <h3>Experience</h3>
                 <div class="cv-item">
                     <h4>Summer Intern</h4>
                     <p class="company">Çakmak Attorney Partnership — September 2025</p>
