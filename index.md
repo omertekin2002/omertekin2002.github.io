@@ -82,14 +82,15 @@ title: CV
             </div>
             
             <div class="cv-card">
-                <h3>Technical Skills</h3>
+                <h3>Skills</h3>
                 <div class="skills-list">
-                    <span class="skill-tag">Skill one</span>
-                    <span class="skill-tag">Skill two</span>
-                    <span class="skill-tag">Skill three</span>
-                    <span class="skill-tag">Framework one</span>
-                    <span class="skill-tag">Framework two</span>
-                    <span class="skill-tag">Tool one</span>
+                    <span class="skill-tag">Microsoft Power BI</span>
+                    <span class="skill-tag">Excel</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">UYAP</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Office Suite</span>
+                    <span class="skill-tag">MCP Integration</span>
                 </div>
             </div>
         </div>
