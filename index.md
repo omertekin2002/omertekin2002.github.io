@@ -346,6 +346,12 @@ body {
     -webkit-column-gap: 32px;
        -moz-column-gap: 32px;
             column-gap: 32px;
+    -webkit-column-fill: balance;
+            column-fill: balance;
+    /* Default to 3 columns on desktop */
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
 }
 
 .cv-card {
@@ -360,20 +366,20 @@ body {
     margin: 0 0 32px;
 }
 
-/* Ensure consistent column counts across browsers */
-@media (min-width: 1200px) {
-    .cv-grid {
-        -webkit-column-count: 3;
-           -moz-column-count: 3;
-                column-count: 3;
-    }
-}
-
-@media (min-width: 900px) and (max-width: 1199px) {
+/* Responsive column count fallbacks */
+@media (max-width: 1100px) {
     .cv-grid {
         -webkit-column-count: 2;
            -moz-column-count: 2;
                 column-count: 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .cv-grid {
+        -webkit-column-count: 1;
+           -moz-column-count: 1;
+                column-count: 1;
     }
 }
 
