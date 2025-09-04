@@ -44,8 +44,8 @@ title: CV
             <div class="cv-card">
                 <h3>Education</h3>
                 <div class="cv-item">
-                    <h4>Degree</h4>
-                    <p>University Name, 20XX–20XX</p>
+                    <h4>Bachelor of Laws (LLB)</h4>
+                    <p>Koç University, 2022–2026</p>
                 </div>
             </div>
             
