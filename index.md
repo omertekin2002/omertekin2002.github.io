@@ -339,8 +339,13 @@ body {
 
 /* CV Section */
 .cv-grid {
-    column-width: 350px;
-    column-gap: 32px;
+    /* Masonry via CSS columns */
+    -webkit-column-width: 350px;
+       -moz-column-width: 350px;
+            column-width: 350px;
+    -webkit-column-gap: 32px;
+       -moz-column-gap: 32px;
+            column-gap: 32px;
 }
 
 .cv-card {
@@ -353,6 +358,23 @@ body {
     width: 100%;
     break-inside: avoid;
     margin: 0 0 32px;
+}
+
+/* Ensure consistent column counts across browsers */
+@media (min-width: 1200px) {
+    .cv-grid {
+        -webkit-column-count: 3;
+           -moz-column-count: 3;
+                column-count: 3;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .cv-grid {
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+                column-count: 2;
+    }
 }
 
 .cv-card h3 {
