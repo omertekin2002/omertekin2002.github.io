@@ -68,6 +68,7 @@ title: CV
             </div>
             </div>
 
+            <div class="right-col">
             <div class="cv-card experience">
                 <h3>Experience</h3>
                 <div class="cv-item">
@@ -118,6 +119,7 @@ title: CV
                     <h4>YÖKDİL</h4>
                     <p class="company">95/100 — (2023)</p>
                 </div>
+            </div>
             </div>
         </div>
     </div>
@@ -363,6 +365,8 @@ body {
 .cv-card.education { grid-column: 1; grid-row: 1; }
 .left-col { display: contents; }
 .left-col > .cv-card { grid-column: 1; }
+.right-col { display: contents; }
+.right-col > .cv-card { grid-column: 2 / span 2; }
 .cv-card.education { grid-column: 1; grid-row: 1; }
 .cv-card.skills { grid-column: 1; grid-row: 2; }
 .cv-card.experience { grid-column: 2; grid-row: 1; }
@@ -371,6 +375,7 @@ body {
 /* 2-col placement */
 @media (max-width: 1100px) {
   .left-col > .cv-card { grid-column: auto; }
+  .right-col > .cv-card { grid-column: auto; }
   .cv-card.education { grid-column: 1; grid-row: 1; }
   .cv-card.experience { grid-column: 2; grid-row: 1; }
   .cv-card.skills { grid-column: 1; grid-row: 2; }
