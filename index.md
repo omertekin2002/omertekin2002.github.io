@@ -54,6 +54,19 @@ title: CV
             </div>
             
             <div class="cv-card">
+                <h3>Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Microsoft Power BI</span>
+                    <span class="skill-tag">Excel</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">UYAP</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Office Suite</span>
+                    <span class="skill-tag">MCP Integration</span>
+                </div>
+            </div>
+
+            <div class="cv-card">
                 <h3>Experience</h3>
                 <div class="cv-item">
                     <h4>Summer Intern</h4>
@@ -78,19 +91,6 @@ title: CV
                 <div class="cv-item">
                     <h4>Tutor</h4>
                     <p class="company">Koç University Office of Teaching and Learning (Python) — October 2023 – January 2024</p>
-                </div>
-            </div>
-            
-            <div class="cv-card">
-                <h3>Skills</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">Microsoft Power BI</span>
-                    <span class="skill-tag">Excel</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">UYAP</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Office Suite</span>
-                    <span class="skill-tag">MCP Integration</span>
                 </div>
             </div>
 
