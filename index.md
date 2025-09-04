@@ -340,12 +340,12 @@ body {
 /* CV Section */
 .cv-grid {
     /* Masonry via CSS columns */
-    -webkit-column-width: 340px;
-       -moz-column-width: 340px;
-            column-width: 340px;
-    -webkit-column-gap: 32px;
-       -moz-column-gap: 32px;
-            column-gap: 32px;
+    -webkit-column-width: 320px;
+       -moz-column-width: 320px;
+            column-width: 320px;
+    -webkit-column-gap: 24px;
+       -moz-column-gap: 24px;
+            column-gap: 24px;
     -webkit-column-fill: balance;
             column-fill: balance;
     /* Default to 3 columns on desktop */
@@ -363,7 +363,7 @@ body {
     display: inline-block;
     width: 100%;
     break-inside: avoid;
-    margin: 0 0 32px;
+    margin: 0 0 24px;
 }
 
 /* Responsive column count fallbacks */
