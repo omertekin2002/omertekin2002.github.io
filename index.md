@@ -120,7 +120,6 @@ title: CV
                     <p class="company">95/100 — (2023)</p>
                 </div>
             </div>
-            </div>
         </div>
     </div>
 </section>
@@ -361,25 +360,22 @@ body {
 @media (max-width: 1100px) { .cv-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .cv-grid { grid-template-columns: 1fr; } }
 
-/* Explicit placement desktop */
-.cv-card.education { grid-column: 1; grid-row: 1; }
-.left-col { display: contents; }
-.left-col > .cv-card { grid-column: 1; }
+/* Column layout: stack left column cards, place others by column */
+.left-col {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 .right-col { display: contents; }
-.right-col > .cv-card { grid-column: 2 / span 2; }
-.cv-card.education { grid-column: 1; grid-row: 1; }
-.cv-card.skills { grid-column: 1; grid-row: 2; }
-.cv-card.experience { grid-column: 2; grid-row: 1; }
-.cv-card.certifications { grid-column: 3; grid-row: 1; }
+.cv-card.experience { grid-column: 2; }
+.cv-card.certifications { grid-column: 3; }
 
 /* 2-col placement */
 @media (max-width: 1100px) {
-  .left-col > .cv-card { grid-column: auto; }
-  .right-col > .cv-card { grid-column: auto; }
-  .cv-card.education { grid-column: 1; grid-row: 1; }
-  .cv-card.experience { grid-column: 2; grid-row: 1; }
-  .cv-card.skills { grid-column: 1; grid-row: 2; }
-  .cv-card.certifications { grid-column: 2; grid-row: 2; }
+  .left-col { grid-column: 1; }
+  .cv-card.experience { grid-column: 2; }
+  .cv-card.certifications { grid-column: 2; }
 }
 
 .cv-card h3 {
