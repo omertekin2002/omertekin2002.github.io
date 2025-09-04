@@ -47,6 +47,10 @@ title: CV
                     <h4>Bachelor of Laws (LLB)</h4>
                     <p>Koç University, 2022–2026</p>
                 </div>
+                <div class="cv-item">
+                    <h4>High School</h4>
+                    <p>6 A-Grade GCSE's taken, 2017-2022</p>
+                </div>
             </div>
             
             <div class="cv-card">
