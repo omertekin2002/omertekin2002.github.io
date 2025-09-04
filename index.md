@@ -339,11 +339,8 @@ body {
 
 /* CV Section */
 .cv-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 32px;
-    align-items: start;
-    grid-auto-flow: row dense;
+    column-width: 350px;
+    column-gap: 32px;
 }
 
 .cv-card {
@@ -352,6 +349,10 @@ body {
     border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    width: 100%;
+    break-inside: avoid;
+    margin: 0 0 32px;
 }
 
 .cv-card h3 {
