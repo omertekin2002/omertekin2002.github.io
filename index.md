@@ -56,9 +56,28 @@ title: CV
             <div class="cv-card">
                 <h3>Work Experience</h3>
                 <div class="cv-item">
-                    <h4>Job Title</h4>
-                    <p class="company">Company Name — 20XX–20XX</p>
-                    <p>Brief description of responsibilities or achievements.</p>
+                    <h4>Summer Intern</h4>
+                    <p class="company">Çakmak Attorney Partnership — September 2025</p>
+                </div>
+                <div class="cv-item">
+                    <h4>Summer Intern</h4>
+                    <p class="company">Bezen Attorney Partnership — August 2025</p>
+                </div>
+                <div class="cv-item">
+                    <h4>Intern</h4>
+                    <p class="company">Ak & Daniş Attorney Partnership — January 2025</p>
+                </div>
+                <div class="cv-item">
+                    <h4>Participant & Oralist</h4>
+                    <p class="company">Frankfurt Investment Arbitration Moot Court — September 2024 – June 2025</p>
+                </div>
+                <div class="cv-item">
+                    <h4>Intern</h4>
+                    <p class="company">DNPartners — October 2024 – November 2024</p>
+                </div>
+                <div class="cv-item">
+                    <h4>Tutor</h4>
+                    <p class="company">Koç University Office of Teaching and Learning (Python) — October 2023 – January 2024</p>
                 </div>
             </div>
             
