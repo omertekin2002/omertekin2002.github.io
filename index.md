@@ -93,6 +93,30 @@ title: CV
                     <span class="skill-tag">MCP Integration</span>
                 </div>
             </div>
+
+            <div class="cv-card">
+                <h3>Certifications</h3>
+                <div class="cv-item">
+                    <h4>SPL Düzey 1</h4>
+                    <p class="company">Sermaye Piyasası Lisanslama Sicil ve Eğitim Kuruluşu A.Ş. (2024)</p>
+                </div>
+                <div class="cv-item">
+                    <h4>Microsoft Power BI Data Analyst</h4>
+                    <p class="company">Microsoft (2025)</p>
+                </div>
+                <div class="cv-item">
+                    <h4>IELTS Academic</h4>
+                    <p class="company">8.0/9.0 — (2025)</p>
+                </div>
+                <div class="cv-item">
+                    <h4>Mergers and Acquisitions, Share Purchase Agreements and Shareholders Agreements of Joint Stock Companies</h4>
+                    <p class="company">Koç University (2024)</p>
+                </div>
+                <div class="cv-item">
+                    <h4>YÖKDİL</h4>
+                    <p class="company">95/100 — (2023)</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
