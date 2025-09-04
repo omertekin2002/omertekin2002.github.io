@@ -340,9 +340,9 @@ body {
 /* CV Section */
 .cv-grid {
     /* Masonry via CSS columns */
-    -webkit-column-width: 350px;
-       -moz-column-width: 350px;
-            column-width: 350px;
+    -webkit-column-width: 340px;
+       -moz-column-width: 340px;
+            column-width: 340px;
     -webkit-column-gap: 32px;
        -moz-column-gap: 32px;
             column-gap: 32px;
@@ -367,7 +367,7 @@ body {
 }
 
 /* Responsive column count fallbacks */
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     .cv-grid {
         -webkit-column-count: 2;
            -moz-column-count: 2;
