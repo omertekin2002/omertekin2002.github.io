@@ -94,7 +94,7 @@ title: CV
                 </div>
             </div>
 
-            <div class="cv-card">
+            <div class="cv-card certifications">
                 <h3>Certifications</h3>
                 <div class="cv-item">
                     <h4>SPL Düzey 1</h4>
@@ -352,6 +352,15 @@ body {
     -webkit-column-count: 3;
        -moz-column-count: 3;
             column-count: 3;
+}
+
+/* Force Certifications to the next column (right side) on wide screens */
+@media (min-width: 1200px) {
+    .cv-card.certifications {
+        -webkit-column-break-before: always;
+           -moz-column-break-before: always;
+                break-before: column;
+    }
 }
 
 .cv-card {
