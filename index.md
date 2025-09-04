@@ -41,7 +41,7 @@ title: CV
     <div class="container">
         <h2>Experience & Skills</h2>
         <div class="cv-grid">
-            <div class="cv-card">
+            <div class="cv-card education">
                 <h3>Education</h3>
                 <div class="cv-item">
                     <h4>Bachelor of Laws (LLB)</h4>
@@ -53,7 +53,7 @@ title: CV
                 </div>
             </div>
             
-            <div class="cv-card">
+            <div class="cv-card skills">
                 <h3>Skills</h3>
                 <div class="skills-list">
                     <span class="skill-tag">Microsoft Power BI</span>
@@ -66,7 +66,7 @@ title: CV
                 </div>
             </div>
 
-            <div class="cv-card">
+            <div class="cv-card experience">
                 <h3>Experience</h3>
                 <div class="cv-item">
                     <h4>Summer Intern</h4>
@@ -338,29 +338,35 @@ body {
 /* About section styles removed */
 
 /* CV Section */
+/* Masonry layout: use columns in WebKit/Firefox; fallback to CSS grid in Chrome */
 .cv-grid {
-    /* Masonry via CSS columns */
-    -webkit-column-width: 320px;
-       -moz-column-width: 320px;
-            column-width: 320px;
-    -webkit-column-gap: 24px;
-       -moz-column-gap: 24px;
-            column-gap: 24px;
-    -webkit-column-fill: balance;
-            column-fill: balance;
-    /* Default to 3 columns on desktop */
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
-/* Force Certifications to the next column (right side) on wide screens */
-@media (min-width: 1200px) {
-    .cv-card.certifications {
-        -webkit-column-break-before: always;
-           -moz-column-break-before: always;
-                break-before: column;
+@supports (column-width: 320px) and (break-inside: avoid) {
+    .cv-grid {
+        display: block;
+        -webkit-column-width: 320px;
+           -moz-column-width: 320px;
+                column-width: 320px;
+        -webkit-column-gap: 24px;
+           -moz-column-gap: 24px;
+                column-gap: 24px;
+        -webkit-column-fill: balance;
+                column-fill: balance;
     }
+    .cv-card { display: inline-block; width: 100%; break-inside: avoid; margin: 0 0 24px; }
+}
+
+/* Force the column order using nth-of-type fallbacks on wide screens */
+@media (min-width: 1200px) {
+    .cv-grid { -webkit-column-count: 3; column-count: 3; }
+    .cv-card.education { -webkit-column-break-before: auto; break-before: auto; }
+    .cv-card.skills { -webkit-column-break-before: auto; break-before: auto; }
+    .cv-card.experience { -webkit-column-break-before: auto; break-before: auto; }
+    .cv-card.certifications { -webkit-column-break-before: auto; break-before: auto; }
 }
 
 .cv-card {
@@ -369,27 +375,14 @@ body {
     border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    display: inline-block;
-    width: 100%;
-    break-inside: avoid;
-    margin: 0 0 24px;
 }
 
 /* Responsive column count fallbacks */
-@media (max-width: 1000px) {
-    .cv-grid {
-        -webkit-column-count: 2;
-           -moz-column-count: 2;
-                column-count: 2;
-    }
+@media (max-width: 1100px) {
+    .cv-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 640px) {
-    .cv-grid {
-        -webkit-column-count: 1;
-           -moz-column-count: 1;
-                column-count: 1;
-    }
+    .cv-grid { grid-template-columns: 1fr; }
 }
 
 .cv-card h3 {
