@@ -17,6 +17,7 @@ let highScore = 0;
 let gameInterval;
 let gameSpeed = 150; // milliseconds
 let isGameOver = false;
+let particles = [];
 
 // Load high score from localStorage
 function loadHighScore() {
@@ -41,6 +42,24 @@ function updateScoreDisplay() {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw subtle grid background
+    ctx.save();
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.06)';
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= gridCount; i++) {
+        // vertical
+        ctx.beginPath();
+        ctx.moveTo(i * gridSize + 0.5, 0);
+        ctx.lineTo(i * gridSize + 0.5, canvas.height);
+        ctx.stroke();
+        // horizontal
+        ctx.beginPath();
+        ctx.moveTo(0, i * gridSize + 0.5);
+        ctx.lineTo(canvas.width, i * gridSize + 0.5);
+        ctx.stroke();
+    }
+    ctx.restore();
 
     // Draw snake with modern gradient and rounded corners
     snake.forEach((segment, index) => {
@@ -117,6 +136,26 @@ function draw() {
         ctx.arc(x + gridSize/3, y + gridSize/3, gridSize/6, 0, Math.PI * 2);
         ctx.fill();
     }
+
+    // Draw and update particles (e.g., when food is eaten)
+    if (particles.length > 0) {
+        for (let i = particles.length - 1; i >= 0; i--) {
+            const p = particles[i];
+            // Update
+            p.x += p.vx;
+            p.y += p.vy;
+            p.life -= 1;
+            p.vy += 0.02; // slight gravity
+            // Render
+            const alpha = Math.max(p.life / p.maxLife, 0);
+            ctx.fillStyle = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${alpha})`;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fill();
+            // Remove dead
+            if (p.life <= 0) particles.splice(i, 1);
+        }
+    }
 }
 
 function generateFood() {
@@ -175,6 +214,10 @@ function moveSnake() {
     if (head.x === food.x && head.y === food.y) {
         score++;
         updateScoreDisplay();
+        // Spawn celebratory particles at food location (cell center)
+        const cx = food.x * gridSize + gridSize / 2;
+        const cy = food.y * gridSize + gridSize / 2;
+        spawnParticles(cx, cy, 18);
         generateFood();
         // Increase speed slightly
         gameSpeed = Math.max(50, gameSpeed - 5);
@@ -275,3 +318,32 @@ function resizeCanvas() {
 window.addEventListener('resize', resizeCanvas);
 // Ensure size is correct once DOM is ready
 setTimeout(resizeCanvas, 0);
+
+// Particle helpers
+function spawnParticles(x, y, count) {
+    for (let i = 0; i < count; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = 1 + Math.random() * 2.5;
+        particles.push({
+            x,
+            y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            size: 2 + Math.random() * 2,
+            life: 35 + Math.floor(Math.random() * 15),
+            maxLife: 50,
+            color: pickParticleColor()
+        });
+    }
+}
+
+function pickParticleColor() {
+    // Colors complementary to snake/food palette
+    const palette = [
+        { r: 34, g: 197, b: 94 },   // emerald
+        { r: 16, g: 185, b: 129 },  // teal
+        { r: 248, g: 113, b: 113 }, // red-400
+        { r: 59, g: 130, b: 246 }   // blue-500
+    ];
+    return palette[Math.floor(Math.random() * palette.length)];
+}
