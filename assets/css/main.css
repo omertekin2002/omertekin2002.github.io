@@ -61,6 +61,7 @@ body {
     display: flex;
     list-style: none;
     gap: 32px;
+    align-items: center; /* ensure vertical centering of all nav links/buttons */
 }
 
 .nav-menu li a {
