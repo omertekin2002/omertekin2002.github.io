@@ -1,4 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-size="56">👾</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#667eea"/>
+      <stop offset="1" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+  <!-- Circular blue/purple backdrop -->
+  <circle cx="8" cy="8" r="7" fill="url(#bg)"/>
+  <!-- Pixel-art 4-sided star (gold) -->
+  <!-- Vertical arm -->
+  <rect x="8" y="3" width="1" height="2" fill="#FBBF24"/>
+  <rect x="8" y="5" width="1" height="1" fill="#FCD34D"/>
+  <rect x="8" y="6" width="1" height="1" fill="#FBBF24"/>
+  <rect x="8" y="7" width="1" height="1" fill="#F59E0B"/>
+  <rect x="8" y="8" width="1" height="1" fill="#FBBF24"/>
+  <rect x="8" y="9" width="1" height="1" fill="#FCD34D"/>
+  <rect x="8" y="10" width="1" height="2" fill="#FBBF24"/>
+  <!-- Horizontal arm -->
+  <rect x="3" y="8" width="2" height="1" fill="#FBBF24"/>
+  <rect x="5" y="8" width="1" height="1" fill="#FCD34D"/>
+  <rect x="6" y="8" width="1" height="1" fill="#FBBF24"/>
+  <rect x="7" y="8" width="1" height="1" fill="#F59E0B"/>
+  <rect x="9" y="8" width="1" height="1" fill="#F59E0B"/>
+  <rect x="10" y="8" width="1" height="1" fill="#FBBF24"/>
+  <rect x="11" y="8" width="2" height="1" fill="#FBBF24"/>
+  <!-- Center bright pixel -->
+  <rect x="8" y="8" width="1" height="1" fill="#FFE58F"/>
 </svg>
-
