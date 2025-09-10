@@ -61,6 +61,7 @@ body {
     display: flex;
     list-style: none;
     gap: 32px;
+    align-items: center; /* ensure vertical centering of all nav links/buttons */
 }
 
 .nav-menu li a {
@@ -76,6 +77,30 @@ body {
 .nav-menu li a:hover {
     color: #2563eb;
     background: rgba(37, 99, 235, 0.1);
+}
+
+/* Pill gradient button for nav */
+.nav-btn-pill {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #0f766e 0%, #065f46 100%);
+    color: #ffffff !important;
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(6, 95, 70, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.nav-btn-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(6, 95, 70, 0.45);
+    filter: brightness(1.05);
+}
+
+.nav-btn-pill:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.35), 0 8px 18px rgba(6, 95, 70, 0.35);
 }
 
 /* Hero Section */
@@ -140,6 +165,8 @@ body {
 .hero-btn.secondary:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Social Links in Hero */
@@ -395,4 +422,46 @@ body {
     padding-top: 70px;
 }
 
+
+/* Liquid Glass Button (animated river effect) */
+.liquid-btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.liquid-btn::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    background: radial-gradient(120% 80% at 10% 0%, rgba(255,255,255,0.50), transparent 60%),
+                radial-gradient(120% 80% at 90% 100%, rgba(37,99,235,0.50), transparent 60%),
+                conic-gradient(from 0deg at 50% 50%, rgba(59,130,246,0.25), rgba(147,197,253,0.25), rgba(99,102,241,0.25), rgba(59,130,246,0.25));
+    filter: blur(16px) saturate(140%) brightness(1.1);
+    animation: riverFlow 8s linear infinite;
+    z-index: -1;
+}
+
+.liquid-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0.18) 40%, transparent 60%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes riverFlow {
+    0% { transform: translateX(-10%) translateY(-5%) rotate(0deg) scale(1.05); }
+    50% { transform: translateX(10%) translateY(5%) rotate(180deg) scale(1.05); }
+    100% { transform: translateX(-10%) translateY(-5%) rotate(360deg) scale(1.05); }
+}
+
+/* Ensure text remains legible on animated background */
+.liquid-btn { color: inherit; }
+.hero-btn.liquid-btn { border: 2px solid rgba(255,255,255,0.25); }
+.hero-btn.secondary.liquid-btn { border-color: rgba(255,255,255,0.35); }
+.social-link.liquid-btn { border: 1px solid rgba(255,255,255,0.25); }
 
