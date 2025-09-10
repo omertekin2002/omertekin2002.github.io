@@ -5,17 +5,25 @@
       <stop offset="1" stop-color="#764ba2"/>
     </linearGradient>
   </defs>
+  <!-- Circular blue/purple backdrop -->
   <circle cx="8" cy="8" r="7" fill="url(#bg)"/>
-  <polygon fill="#667eea" points="8,3 7,4 6,5 5,6 4,7 4,9 5,10 6,11 7,12 8,13 9,12 10,11 11,10 12,9 12,7 11,6 10,5 9,4"/>
-  <polygon fill="#7c8cff" points="8,3 7,4 6,5 5,6 4,7 4,9 5,10 7,9 8,8"/>
-  <polygon fill="#4f46e5" points="8,8 9,9 11,10 12,9 12,7 11,6 10,5 9,6"/>
-  <polygon fill="#4338ca" points="8,10 9,11 10,11 11,10 9,9"/>
-  <polygon fill="#7c3aed" points="8,6 9,6 10,5 9,4 8,4"/>
-  <rect x="7" y="5" width="1" height="1" fill="#e9e7ff"/>
-  <rect x="6" y="6" width="1" height="1" fill="#c7c2ff"/>
-  <rect x="8" y="7" width="1" height="1" fill="#d9d6ff"/>
-  <rect x="7" y="8" width="1" height="1" fill="#efeefe"/>
-  <rect x="8" y="9" width="1" height="1" fill="#e4e2ff"/>
-  <rect x="10" y="11" width="1" height="1" fill="#372f9b"/>
-  <rect x="9" y="12" width="1" height="1" fill="#372f9b"/>
+  <!-- Pixel-art 4-sided star (gold) -->
+  <!-- Vertical arm -->
+  <rect x="8" y="3" width="1" height="2" fill="#FBBF24"/>
+  <rect x="8" y="5" width="1" height="1" fill="#FCD34D"/>
+  <rect x="8" y="6" width="1" height="1" fill="#FBBF24"/>
+  <rect x="8" y="7" width="1" height="1" fill="#F59E0B"/>
+  <rect x="8" y="8" width="1" height="1" fill="#FBBF24"/>
+  <rect x="8" y="9" width="1" height="1" fill="#FCD34D"/>
+  <rect x="8" y="10" width="1" height="2" fill="#FBBF24"/>
+  <!-- Horizontal arm -->
+  <rect x="3" y="8" width="2" height="1" fill="#FBBF24"/>
+  <rect x="5" y="8" width="1" height="1" fill="#FCD34D"/>
+  <rect x="6" y="8" width="1" height="1" fill="#FBBF24"/>
+  <rect x="7" y="8" width="1" height="1" fill="#F59E0B"/>
+  <rect x="9" y="8" width="1" height="1" fill="#F59E0B"/>
+  <rect x="10" y="8" width="1" height="1" fill="#FBBF24"/>
+  <rect x="11" y="8" width="2" height="1" fill="#FBBF24"/>
+  <!-- Center bright pixel -->
+  <rect x="8" y="8" width="1" height="1" fill="#FFE58F"/>
 </svg>
