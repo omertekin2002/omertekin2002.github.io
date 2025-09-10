@@ -436,10 +436,10 @@ body {
     content: "";
     position: absolute;
     inset: -20%;
-    background: radial-gradient(120% 80% at 10% 0%, rgba(255,255,255,0.35), transparent 60%),
-                radial-gradient(120% 80% at 90% 100%, rgba(37,99,235,0.35), transparent 60%),
-                conic-gradient(from 0deg at 50% 50%, rgba(59,130,246,0.15), rgba(147,197,253,0.15), rgba(99,102,241,0.15), rgba(59,130,246,0.15));
-    filter: blur(16px) saturate(120%);
+    background: radial-gradient(120% 80% at 10% 0%, rgba(255,255,255,0.50), transparent 60%),
+                radial-gradient(120% 80% at 90% 100%, rgba(37,99,235,0.50), transparent 60%),
+                conic-gradient(from 0deg at 50% 50%, rgba(59,130,246,0.25), rgba(147,197,253,0.25), rgba(99,102,241,0.25), rgba(59,130,246,0.25));
+    filter: blur(16px) saturate(140%) brightness(1.1);
     animation: riverFlow 8s linear infinite;
     z-index: -1;
 }
@@ -448,7 +448,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.08) 40%, transparent 60%);
+    background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0.18) 40%, transparent 60%);
     pointer-events: none;
     z-index: -1;
 }
