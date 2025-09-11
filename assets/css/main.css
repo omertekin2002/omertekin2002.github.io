@@ -303,39 +303,7 @@ body {
     border: 1px solid #e2e8f0;
 }
 
-/* Game Section */
-.game-container {
-    text-align: center;
-    background: white;
-    padding: 32px;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.game-embed {
-    width: 100%;
-    max-width: min(96vw, 85vh, 1600px);
-    margin: 0 auto;
-}
-
-.game-embed iframe {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border: 0;
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    max-height: 85vh;
-}
-
-#game .container {
-    max-width: min(96vw, 1600px);
-}
-
-#game.section {
-    padding: 60px 0;
-}
+/* (Game section styles removed) */
 
 /* Form Section */
 .form-container {
