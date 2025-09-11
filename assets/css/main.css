@@ -310,6 +310,24 @@ body {
     50% { transform: translate(60px, -40px) scale(1); opacity: 1; }
 }
 
+/* Text glow animation */
+@keyframes textGlow {
+    0% { 
+        text-shadow: 
+            0 0 20px rgba(59, 130, 246, 0.6),
+            0 0 40px rgba(59, 130, 246, 0.4),
+            0 0 60px rgba(59, 130, 246, 0.3),
+            0 0 80px rgba(59, 130, 246, 0.2);
+    }
+    100% { 
+        text-shadow: 
+            0 0 30px rgba(16, 185, 129, 0.8),
+            0 0 50px rgba(16, 185, 129, 0.5),
+            0 0 70px rgba(16, 185, 129, 0.4),
+            0 0 90px rgba(16, 185, 129, 0.3);
+    }
+}
+
 /* Hero Section */
 .hero {
     background: rgba(102, 126, 234, 0.1);
@@ -431,8 +449,15 @@ body {
     font-weight: 700;
     text-align: center;
     margin-bottom: 48px;
-    color: #1e293b;
+    color: #ffffff;
     letter-spacing: -0.025em;
+    text-shadow: 
+        0 0 20px rgba(59, 130, 246, 0.6),
+        0 0 40px rgba(59, 130, 246, 0.4),
+        0 0 60px rgba(59, 130, 246, 0.3),
+        0 0 80px rgba(59, 130, 246, 0.2);
+    animation: textGlow 4s ease-in-out infinite alternate;
+    position: relative;
 }
 
 /* CV Section */
@@ -444,11 +469,12 @@ body {
 }
 
 .cv-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 32px;
     border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 1100px) { .cv-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -516,11 +542,12 @@ body {
 
 /* Form Section */
 .form-container {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 32px;
     border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .form-note {
