@@ -40,6 +40,40 @@ body {
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --accent-primary: #f8fafc;
+    --accent-secondary: #f59e0b;
+    /* Brighter gold for dark mode */
+    --card-bg: #1e293b;
+    --border-color: #334155;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1.2rem;
+}
+
+.theme-toggle:hover {
+    background: var(--card-bg);
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    transform: rotate(15deg);
+}
+
 body {
     font-family: var(--font-body);
     line-height: 1.7;
