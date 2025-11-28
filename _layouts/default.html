@@ -1,40 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-    {%- seo -%}
-    <!-- Favicons (root-level first for Safari reliability) -->
-    <link rel="icon" href="{{ '/favicon.ico?v=7' | relative_url }}" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png?v=7' | relative_url }}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png?v=7' | relative_url }}" />
-    <!-- Optional SVG for supporting browsers -->
-    <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg?v=7' | relative_url }}" />
-    <!-- Apple touch icon and PWA manifest -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png?v=7' | relative_url }}" />
-    <link rel="manifest" href="{{ '/assets/site.webmanifest' | relative_url }}" />
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  </head>
-  <body>
-    <!-- Lava Lamp Background -->
-    <div class="lava-lamp-background">
-      <!-- Main blobs -->
-      <div class="lava-blob lava-blob-1"></div>
-      <div class="lava-blob lava-blob-2"></div>
-      <div class="lava-blob lava-blob-3"></div>
-      <div class="lava-blob lava-blob-4"></div>
-      <div class="lava-blob lava-blob-5"></div>
-      <div class="lava-blob lava-blob-6"></div>
-      
-      <!-- Floating particles -->
-      <div class="lava-particle lava-particle-1"></div>
-      <div class="lava-particle lava-particle-2"></div>
-      <div class="lava-particle lava-particle-3"></div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  {%- seo -%}
+  <!-- Favicons (root-level first for Safari reliability) -->
+  <link rel="icon" href="{{ '/favicon.ico?v=7' | relative_url }}" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png?v=7' | relative_url }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png?v=7' | relative_url }}" />
+  <!-- Optional SVG for supporting browsers -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg?v=7' | relative_url }}" />
+  <!-- Apple touch icon and PWA manifest -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png?v=7' | relative_url }}" />
+  <link rel="manifest" href="{{ '/assets/site.webmanifest' | relative_url }}" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+
+<body>
+  <!-- Background is now handled via CSS on body -->
+  <!-- <canvas id="constellation-canvas"></canvas> -->
+
+  <!-- Geometric Float Container -->
+  <div id="geo-float-container">
+    <div class="geo-shape cube">
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face right"></div>
+      <div class="face left"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
     </div>
+    <div class="geo-shape pyramid">
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face right"></div>
+      <div class="face left"></div>
+      <div class="face bottom"></div>
+    </div>
+    <div class="geo-shape octahedron">
+      <div class="face up-front"></div>
+      <div class="face up-back"></div>
+      <div class="face up-right"></div>
+      <div class="face up-left"></div>
+      <div class="face down-front"></div>
+      <div class="face down-back"></div>
+      <div class="face down-right"></div>
+      <div class="face down-left"></div>
+    </div>
+    <div class="geo-shape ring">
+      <!-- Front and Back Faces -->
+      <div class="ring-face front"></div>
+      <div class="ring-face back"></div>
 
-    {{ content }}
-  </body>
-  </html>
+      <!-- Outer Sides (8 faces) -->
+      <div class="ring-face outer s1"></div>
+      <div class="ring-face outer s2"></div>
+      <div class="ring-face outer s3"></div>
+      <div class="ring-face outer s4"></div>
+      <div class="ring-face outer s5"></div>
+      <div class="ring-face outer s6"></div>
+      <div class="ring-face outer s7"></div>
+      <div class="ring-face outer s8"></div>
 
+      <!-- Inner Sides (8 faces) -->
+      <div class="ring-face inner s1"></div>
+      <div class="ring-face inner s2"></div>
+      <div class="ring-face inner s3"></div>
+      <div class="ring-face inner s4"></div>
+      <div class="ring-face inner s5"></div>
+      <div class="ring-face inner s6"></div>
+      <div class="ring-face inner s7"></div>
+      <div class="ring-face inner s8"></div>
+    </div>
+  </div>
 
+  {{ content }}
+
+  <!-- Geometric Float Script -->
+  <script src="{{ '/assets/js/geometric-float.js' | relative_url }}"></script>
+
+  <!-- Kinetic Typography Script -->
+  <script src="{{ '/assets/js/kinetic-type.js' | relative_url }}"></script>
+</body>
+
+</html>
