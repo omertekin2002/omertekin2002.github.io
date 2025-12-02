@@ -159,42 +159,6 @@ h6 {
     box-shadow: 0 0 15px var(--glass-bg);
 }
 
-/* Cube */
-.cube {
-    width: 100px;
-    height: 100px;
-    top: 20%;
-    left: 15%;
-}
-
-.cube .face {
-    width: 100px;
-    height: 100px;
-}
-
-.cube .front {
-    transform: translateZ(50px);
-}
-
-.cube .back {
-    transform: rotateY(180deg) translateZ(50px);
-}
-
-.cube .right {
-    transform: rotateY(90deg) translateZ(50px);
-}
-
-.cube .left {
-    transform: rotateY(-90deg) translateZ(50px);
-}
-
-.cube .top {
-    transform: rotateX(90deg) translateZ(50px);
-}
-
-.cube .bottom {
-    transform: rotateX(-90deg) translateZ(50px);
-}
 
 /* Pyramid (Corrected) */
 .pyramid {
@@ -256,60 +220,6 @@ h6 {
 
 .pyramid .left {
     transform: translateX(-50px) rotateY(-90deg) rotateX(30deg);
-}
-
-
-/* Octahedron */
-.octahedron {
-    width: 80px;
-    height: 80px;
-    top: 30%;
-    right: 25%;
-}
-
-.octahedron .face {
-    width: 80px;
-    height: 70px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background: var(--glass-bg);
-    border-color: var(--glass-border);
-    transform-origin: bottom;
-}
-
-.octahedron .up-front {
-    transform: translateZ(40px) rotateX(35.26deg);
-}
-
-.octahedron .up-back {
-    transform: translateZ(-40px) rotateY(180deg) rotateX(35.26deg);
-}
-
-.octahedron .up-right {
-    transform: translateX(40px) rotateY(90deg) rotateX(35.26deg);
-}
-
-.octahedron .up-left {
-    transform: translateX(-40px) rotateY(-90deg) rotateX(35.26deg);
-}
-
-.octahedron .down-front {
-    transform: translateZ(40px) rotateX(-35.26deg) rotateZ(180deg) translateY(-70px);
-    transform-origin: top;
-}
-
-.octahedron .down-back {
-    transform: translateZ(-40px) rotateY(180deg) rotateX(-35.26deg) rotateZ(180deg) translateY(-70px);
-    transform-origin: top;
-}
-
-.octahedron .down-right {
-    transform: translateX(40px) rotateY(90deg) rotateX(-35.26deg) rotateZ(180deg) translateY(-70px);
-    transform-origin: top;
-}
-
-.octahedron .down-left {
-    transform: translateX(-40px) rotateY(-90deg) rotateX(-35.26deg) rotateZ(180deg) translateY(-70px);
-    transform-origin: top;
 }
 
 
@@ -567,6 +477,11 @@ h6 {
     background-color: var(--text-primary);
     border-radius: 3px;
     transition: all 0.3s ease;
+}
+
+/* Hide mobile overlay by default on desktop */
+.mobile-nav-overlay {
+    display: none;
 }
 
 @media (max-width: 768px) {
