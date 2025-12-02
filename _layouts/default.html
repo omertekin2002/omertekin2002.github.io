@@ -31,30 +31,12 @@
 
   <!-- Geometric Float Container -->
   <div id="geo-float-container">
-    <div class="geo-shape cube">
-      <div class="face front"></div>
-      <div class="face back"></div>
-      <div class="face right"></div>
-      <div class="face left"></div>
-      <div class="face top"></div>
-      <div class="face bottom"></div>
-    </div>
     <div class="geo-shape pyramid">
       <div class="face front"></div>
       <div class="face back"></div>
       <div class="face right"></div>
       <div class="face left"></div>
       <div class="face bottom"></div>
-    </div>
-    <div class="geo-shape octahedron">
-      <div class="face up-front"></div>
-      <div class="face up-back"></div>
-      <div class="face up-right"></div>
-      <div class="face up-left"></div>
-      <div class="face down-front"></div>
-      <div class="face down-back"></div>
-      <div class="face down-right"></div>
-      <div class="face down-left"></div>
     </div>
     <div class="geo-shape ring">
       <!-- Front and Back Faces -->
@@ -86,10 +68,23 @@
   {{ content }}
 
   <!-- Geometric Float Script -->
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay">
+    <ul class="mobile-nav-links">
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact" class="nav-btn-pill">Book a Meeting</a></li>
+      <li><button class="mobile-nav-btn theme-toggle-btn"><span class="icon">☀️</span></button></li>
+    </ul>
+  </div>
+
   <script src="{{ '/assets/js/geometric-float.js' | relative_url }}"></script>
 
   <!-- Kinetic Typography Script -->
   <script src="{{ '/assets/js/kinetic-type.js' | relative_url }}"></script>
+
+  <!-- Theme Toggle Script -->
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/mobile-nav.js' | relative_url }}"></script>
 </body>
 
 </html>
