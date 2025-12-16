@@ -36,6 +36,29 @@ title: CV
             <a href="mailto:omertekin2002@hotmail.com" class="hero-btn liquid-btn">Get in Touch</a>
             <a href="{{ '/assets/Omer%20Tekin%20CV%20n.pdf' | relative_url }}" class="hero-btn secondary liquid-btn"
                 download="Omer_Tekin_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+
+            <!-- Terminal Component -->
+            <div class="terminal-loader" onclick="copyCode()" aria-label="Click to copy npx otekin command">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <div class="control close"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                    </div>
+                    <div class="terminal-title">user@macbook:~</div>
+                    <button class="copy-btn" id="copyButton" aria-label="Copy code">
+                        <svg class="copy-icon" viewBox="0 0 24 24">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="terminal-text">
+                    <span class="prompt">$</span>
+                    <span id="code-to-copy"><span class="cmd">npx</span> <span class="arg">otekin</span></span>
+                    <span class="cursor"></span>
+                </div>
+            </div>
         </div>
         <div class="social-links">
             <a href="https://linkedin.com/in/%C3%B6mer-tekin" target="_blank" class="social-link liquid-btn"
