@@ -148,10 +148,10 @@ h6 {
 /* Terminal Component Styles */
 .terminal-loader {
     /* HOPSCOTCH Theme Background */
-    background-color: #322931; 
-    
-    border-radius: 12px;       
-    box-shadow: 0 20px 50px rgba(0,0,0,0.4); 
+    background-color: #322931;
+
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     width: fit-content;
     /* Removed large min-width constraint to make it less wide */
     min-width: 200px;
@@ -159,26 +159,27 @@ h6 {
     padding: 15px 20px;
     font-family: 'Fira Code', 'Courier New', monospace;
     position: relative;
-    
+
     /* ADDED: Interactive transitions */
-    transition: transform 0.1s ease, box-shadow 0.2s ease; 
-    border: 1px solid rgba(255,255,255,0.08); 
-    
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
     /* ADDED: Pointer cursor to indicate it's clickable */
     cursor: pointer;
-    text-align: left; /* Ensure text alignment is left within the component */
+    text-align: left;
+    /* Ensure text alignment is left within the component */
 }
 
 /* Subtle lift on hover */
 .terminal-loader:hover {
     transform: translateY(-2px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
 }
 
 /* ADDED: Click press effect (Tactile feedback) */
 .terminal-loader:active {
     transform: scale(0.98) translateY(0);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* The "Traffic Lights" Header */
@@ -186,7 +187,8 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 15px; /* Reduced gap */
+    margin-bottom: 15px;
+    /* Reduced gap */
 }
 
 .terminal-controls {
@@ -201,13 +203,25 @@ h6 {
 }
 
 /* Mac-accurate traffic light colors */
-.control.close { background-color: #FF5F56; box-shadow: inset 0 0 0 1px #E0443E; }
-.control.minimize { background-color: #FFBD2E; box-shadow: inset 0 0 0 1px #DEA123; }
-.control.maximize { background-color: #27C93F; box-shadow: inset 0 0 0 1px #1AAB29; }
+.control.close {
+    background-color: #FF5F56;
+    box-shadow: inset 0 0 0 1px #E0443E;
+}
+
+.control.minimize {
+    background-color: #FFBD2E;
+    box-shadow: inset 0 0 0 1px #DEA123;
+}
+
+.control.maximize {
+    background-color: #27C93F;
+    box-shadow: inset 0 0 0 1px #1AAB29;
+}
 
 /* The Title */
 .terminal-title {
-    color: #989498; /* Hopscotch muted text */
+    color: #989498;
+    /* Hopscotch muted text */
     font-size: 0.8rem;
     font-weight: 500;
     margin-right: 10px;
@@ -225,19 +239,22 @@ h6 {
 }
 
 .prompt {
-    color: #989498; /* Hopscotch Grey for $ */
+    color: #989498;
+    /* Hopscotch Grey for $ */
     user-select: none;
     font-weight: 600;
 }
 
 /* HOPSCOTCH SPECIFIC COLORS */
 .cmd {
-    color: #dd464c; /* Hopscotch Pink/Red for command */
+    color: #dd464c;
+    /* Hopscotch Pink/Red for command */
     font-weight: 600;
 }
 
 .arg {
-    color: #fdcc59; /* Hopscotch Yellow for argument */
+    color: #fdcc59;
+    /* Hopscotch Yellow for argument */
 }
 
 /* Cursor animation */
@@ -245,21 +262,30 @@ h6 {
     display: inline-block;
     width: 9px;
     height: 1.2rem;
-    background-color: #dd464c; /* Matching Pink cursor */
+    background-color: #dd464c;
+    /* Matching Pink cursor */
     animation: blink 1s infinite;
     margin-left: 2px;
     opacity: 0.7;
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 /* Copy Button (Hidden by default, shown on hover) */
 .copy-btn {
     position: absolute;
-    top: 12px; /* Adjusted position */
+    top: 12px;
+    /* Adjusted position */
     right: 12px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -272,7 +298,8 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none; /* Let clicks pass through to the main container */
+    pointer-events: none;
+    /* Let clicks pass through to the main container */
 }
 
 .terminal-loader:hover .copy-btn {
@@ -280,7 +307,8 @@ h6 {
 }
 
 .copy-icon {
-    width: 14px; /* Slightly smaller icon */
+    width: 14px;
+    /* Slightly smaller icon */
     height: 14px;
     fill: none;
     stroke: currentColor;
@@ -295,7 +323,8 @@ h6 {
     position: absolute;
     top: -32px;
     right: 0;
-    background: #27c93f; /* Green success */
+    background: #27c93f;
+    /* Green success */
     color: white;
     font-size: 0.75rem;
     font-weight: 600;
@@ -305,7 +334,7 @@ h6 {
     transform: translateY(5px);
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     pointer-events: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .copy-btn.copied::after {
@@ -835,6 +864,7 @@ h6 {
     display: flex;
     gap: 16px;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
