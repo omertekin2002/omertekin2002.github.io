@@ -121,16 +121,7 @@ h6 {
     color: var(--accent-secondary);
 }
 
-.reveal-text {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-}
 
-.reveal-text.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 /* Geometric Float Container */
 #geo-float-container {
@@ -374,8 +365,8 @@ h6 {
     border-color: rgba(180, 83, 9, 0.2);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     transform-origin: bottom;
-    height: 115px;
-    /* Slant height for ~30deg tilt */
+    height: 100px;
+    /* Slant height for 30deg tilt: 50 / sin(30) = 100 */
     position: absolute;
     left: 0;
     top: 0;
@@ -392,10 +383,10 @@ h6 {
     /* Align base to the bottom of the faces */
     position: absolute;
     left: 0;
-    /* Center of base needs to be at Y=115px (bottom of faces).
+    /* Center of base needs to be at Y=100px (bottom of faces).
        Height is 100px, so center is at top+50px.
-       top + 50 = 115 => top = 65px. */
-    top: 65px;
+       top + 50 = 100 => top = 50px. */
+    top: 50px;
     transform-origin: center;
     transform: rotateX(90deg);
 }
@@ -1143,4 +1134,111 @@ h6 {
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Site Footer Styles */
+.site-footer {
+    padding: 60px 0 40px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 80px;
+    background: var(--bg-color);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.social-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.social-icon {
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    opacity: 0.7;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    /* Use CSS filter to control color for SVGs loaded as images */
+    filter: grayscale(100%);
+    transition: all 0.2s ease;
+}
+
+/* Specific hover states */
+.social-icon:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.social-icon:hover img {
+    filter: none;
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .social-icon img {
+    /* Invert to make white */
+    filter: invert(1) grayscale(100%);
+}
+
+[data-theme="dark"] .social-icon:hover img {
+    /* Add glow effect for better visibility */
+    filter: invert(1) grayscale(100%) drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+/* Light Mode Hover */
+[data-theme="light"] .social-icon:hover img {
+    filter: grayscale(0%);
+}
+
+.copyright {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+/* Alive List Items */
+.cv-item:hover {
+    /* Optional: highlight the whole item slightly */
+}
+
+/* Assuming CV items are divs, let's target paragraphs or headers inside if they act as list items.
+   The structure shows .cv-item contains h4 and p. 
+   There isn't a <ul> structure in the CV text. 
+   The user asked for "Alive List Items" referring to "bullet points in your Experience cards".
+   Looking at index.html, experience items are divs with class cv-item.
+   There are no bullet points (<li>). 
+   I should make the .cv-item itself "alive".
+*/
+.cv-item {
+    transition: transform 0.2s ease;
+    border-left: 2px solid transparent;
+    padding-left: 0;
+}
+
+.cv-item:hover {
+    transform: translateX(6px);
+    border-left: 2px solid var(--accent-secondary);
+    padding-left: 12px;
+}
+
+.cv-item:hover h4 {
+    color: var(--accent-secondary);
+    transition: color 0.2s ease;
 }

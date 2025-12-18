@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     initMagneticText();
-    initScrollReveal();
 });
 
 function initMagneticText() {
@@ -62,25 +61,7 @@ function initMagneticText() {
     });
 }
 
-function initScrollReveal() {
-    const sections = document.querySelectorAll('.section h2, .hero-subtitle, .cv-card');
 
-    // Add reveal class
-    sections.forEach(el => el.classList.add('reveal-text'));
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    sections.forEach(el => observer.observe(el));
-}
 
 function distance(x1, y1, x2, y2) {
     return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
