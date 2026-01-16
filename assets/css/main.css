@@ -1137,9 +1137,9 @@ html {
 
 /* Site Footer Styles */
 .site-footer {
-    padding: 60px 0 40px;
+    padding: 32px 0 24px;
     border-top: 1px solid var(--border-color);
-    margin-top: 80px;
+    margin-top: 40px;
     background: var(--bg-color);
     transition: background 0.3s ease, border-color 0.3s ease;
 }
