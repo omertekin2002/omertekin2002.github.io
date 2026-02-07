@@ -950,11 +950,10 @@ h6 {
 /* Mobile Navigation */
 .mobile-menu-btn {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
     width: 42px;
     height: 42px;
-    padding: 11px 10px;
+    padding: 0;
     background: var(--nav-toggle-bg);
     border: 1px solid var(--nav-shell-border);
     border-radius: 999px;
@@ -964,12 +963,41 @@ h6 {
 }
 
 .mobile-menu-btn span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
     width: 18px;
     height: 2px;
-    margin: 0 auto;
+    margin: 0;
     background-color: var(--accent-primary);
     border-radius: 999px;
-    transition: all 0.3s ease;
+    transform-origin: center;
+    transition: transform 0.3s ease, opacity 0.25s ease, background-color 0.25s ease;
+}
+
+.mobile-menu-btn span:nth-child(1) {
+    transform: translate(-50%, -6px);
+}
+
+.mobile-menu-btn span:nth-child(2) {
+    transform: translate(-50%, 0);
+}
+
+.mobile-menu-btn span:nth-child(3) {
+    transform: translate(-50%, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: translate(-50%, 0) rotate(45deg);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+    transform: translate(-50%, 0) scaleX(0);
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: translate(-50%, 0) rotate(-45deg);
 }
 
 /* Hide mobile overlay by default on desktop */
@@ -1117,18 +1145,6 @@ h6 {
         font-size: 1.5rem;
     }
 
-    /* Hamburger Animation */
-    .mobile-menu-btn.active span:nth-child(1) {
-        transform: translateY(4px) rotate(45deg);
-    }
-
-    .mobile-menu-btn.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .mobile-menu-btn.active span:nth-child(3) {
-        transform: translateY(-4px) rotate(-45deg);
-    }
 }
 
 [data-theme="dark"] .nav-btn-pill {
