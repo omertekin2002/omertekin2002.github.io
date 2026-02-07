@@ -1135,6 +1135,21 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Hide scrollbars while preserving scroll behavior */
+html,
+body {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and legacy Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
 /* Site Footer Styles */
 .site-footer {
     padding: 32px 0 24px;
