@@ -23,7 +23,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3' # Not strictly 2.6, using a modern stable version for build
+          ruby-version: '3.2' # Compatible with locked sass-embedded/google-protobuf versions
           bundler-cache: true
       - name: Setup Pages
         uses: actions/configure-pages@v5
