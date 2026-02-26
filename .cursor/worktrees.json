@@ -1,7 +1,5 @@
 {
   "setup-worktree-unix": [
-    "export PATH=\"/opt/homebrew/opt/ruby/bin:$PATH\"",
-    "bundle config set --local path 'vendor/bundle'",
-    "bundle install"
+    "echo 'Static site — no build dependencies. Ready to go.'"
   ]
 }
