@@ -1,414 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV · Ömer Tekin</title>
-  <!-- SEO -->
-  <meta property="og:title" content="CV" />
+  <title>Ömer Tekin // Portfolio</title>
+  
+  <!-- SEO & Meta -->
+  <meta property="og:title" content="CV // Ömer Tekin" />
   <meta property="og:locale" content="en_US" />
   <link rel="canonical" href="https://omertekin2002.github.io/" />
   <meta property="og:url" content="https://omertekin2002.github.io/" />
   <meta property="og:site_name" content="Ömer Tekin" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <meta property="twitter:title" content="CV" />
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","headline":"CV","name":"Ömer Tekin","url":"https://omertekin2002.github.io/"}
-  </script>
-  <!-- Favicons (root-level first for Safari reliability) -->
+  
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico?v=7" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=7" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=7" />
-  <!-- Optional SVG for supporting browsers -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=7" />
-  <!-- Apple touch icon and PWA manifest -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=7" />
   <link rel="manifest" href="/assets/site.webmanifest" />
+  
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
-    rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Brutalist CSS -->
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-
 <body>
-  <!-- Background is now handled via CSS on body -->
-  <!-- <canvas id="constellation-canvas"></canvas> -->
+  
+  <div class="noise-overlay"></div>
 
-  <div id="dynamic-bg" aria-hidden="true">
-    <div class="bg-layer aurora-layer"></div>
-    <div class="bg-layer glow-orb orb-a"></div>
-    <div class="bg-layer glow-orb orb-b"></div>
-    <div class="bg-layer glow-orb orb-c"></div>
-    <div class="bg-layer grid-layer"></div>
-    <div class="bg-layer noise-layer"></div>
-  </div>
-
-  <!-- Geometric Float Container -->
-  <div id="geo-float-container">
-    <div class="geo-shape pyramid">
-      <div class="face front"></div>
-      <div class="face back"></div>
-      <div class="face right"></div>
-      <div class="face left"></div>
-      <div class="face bottom"></div>
+  <div class="site-frame">
+    <!-- Top Marquee -->
+    <div class="marquee">
+      <span>LAW & BUSINESS ENTHUSIAST /// OPEN FOR OPPORTUNITIES /// ISTANBUL, TURKEY /// CREATIVE & CRITICAL THINKER ///</span>
     </div>
-    <div class="geo-shape ring">
-      <!-- Front and Back Faces -->
-      <div class="ring-face front"></div>
-      <div class="ring-face back"></div>
 
-      <!-- Outer Sides (8 faces) -->
-      <div class="ring-face outer s1"></div>
-      <div class="ring-face outer s2"></div>
-      <div class="ring-face outer s3"></div>
-      <div class="ring-face outer s4"></div>
-      <div class="ring-face outer s5"></div>
-      <div class="ring-face outer s6"></div>
-      <div class="ring-face outer s7"></div>
-      <div class="ring-face outer s8"></div>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+      <div class="nav-brand">
+        ÖMER TEKIN <span class="blink">_</span>
+        <span class="badge">V.2</span>
+      </div>
+      <div class="nav-links">
+        <a href="/assets/Omer%20Tekin%20CV%20n.pdf" target="_blank">[ CV ]</a>
+        <a href="#experience">[ EXP ]</a>
+        <a href="#projects">[ PRJ ]</a>
+        <button id="theme-toggle" class="theme-toggle-btn"><span class="icon">☀️</span></button>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
 
-      <!-- Inner Sides (8 faces) -->
-      <div class="ring-face inner s1"></div>
-      <div class="ring-face inner s2"></div>
-      <div class="ring-face inner s3"></div>
-      <div class="ring-face inner s4"></div>
-      <div class="ring-face inner s5"></div>
-      <div class="ring-face inner s6"></div>
-      <div class="ring-face inner s7"></div>
-      <div class="ring-face inner s8"></div>
-    </div>
-  </div>
+    <!-- Main Content Grid -->
+    <main class="content-grid">
+      
+      <!-- HERO -->
+      <section class="grid-cell full-width hero-cell">
+        <div id="geo-float-container">
+          <div class="geo-shape pyramid">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face bottom"></div>
+          </div>
+          <div class="geo-shape ring"></div>
+        </div>
 
-<!-- Sticky Navigation Header -->
-<nav class="sticky-nav">
-    <div class="nav-container">
-        <div class="nav-brand">Ömer Tekin</div>
-        <button class="mobile-menu-btn" aria-label="Toggle Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-menu">
-            <li><a href="/assets/Omer%20Tekin%20CV%20n.pdf" target="_blank">CV</a></li>
-            <li><a href="#contact" class="nav-btn-pill">Book a Meeting</a></li>
-            <li>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
-                    <span class="icon">☀️</span>
-                </button>
-            </li>
+        <div class="hero-content">
+          <h1>Ömer Tekin</h1>
+        </div>
+        
+        <div class="hero-desc">
+          Law & Business Enthusiast
+        </div>
+
+        <div class="npx-box">
+          <div class="npx-header">
+            <span>TERMINAL</span>
+            <span>[X]</span>
+          </div>
+          <div class="npx-body">
+            <span class="prompt">$</span>
+            <span id="code-to-copy">npx otekin</span>
+            <button id="copyButton" onclick="copyCode()">COPY</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="grid-cell" id="experience">
+        <h2 class="section-title">EXPERIENCE_</h2>
+        <ul class="raw-list">
+          <li>
+            <div class="year">2025 // SEP</div>
+            <div class="details">
+              <span class="details-title">Summer Intern</span>
+              <span class="details-sub">Çakmak Attorney Partnership</span>
+            </div>
+          </li>
+          <li>
+            <div class="year">2025 // AUG</div>
+            <div class="details">
+              <span class="details-title">Summer Intern</span>
+              <span class="details-sub">Bezen Attorney Partnership</span>
+            </div>
+          </li>
+          <li>
+            <div class="year">2025 // JAN</div>
+            <div class="details">
+              <span class="details-title">Intern</span>
+              <span class="details-sub">Ak & Daniş Attorney Partnership</span>
+            </div>
+          </li>
+          <li>
+            <div class="year">24' - 25'</div>
+            <div class="details">
+              <span class="details-title">Participant & Oralist</span>
+              <span class="details-sub">Frankfurt Investment Arbitration Moot Court</span>
+            </div>
+          </li>
+          <li>
+            <div class="year">2024 // OCT</div>
+            <div class="details">
+              <span class="details-title">Intern</span>
+              <span class="details-sub">DNPartners</span>
+            </div>
+          </li>
+          <li>
+            <div class="year">23' - 24'</div>
+            <div class="details">
+              <span class="details-title">Tutor (Python)</span>
+              <span class="details-sub">Koç University Office of Teaching and Learning</span>
+            </div>
+          </li>
         </ul>
-    </div>
+      </section>
 
-</nav>
-
-
-
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Ömer Tekin</h1>
-        <p class="hero-subtitle">Law & Business Enthusiast</p>
-        <div class="hero-links">
-
-
-            <!-- Terminal Component -->
-            <div class="terminal-loader" onclick="copyCode()" aria-label="Click to copy npx otekin command">
-                <div class="terminal-header">
-                    <div class="terminal-controls">
-                        <div class="control close"></div>
-                        <div class="control minimize"></div>
-                        <div class="control maximize"></div>
-                    </div>
-                    <div class="terminal-title">user@macbook:~</div>
-                    <button class="copy-btn" id="copyButton" aria-label="Copy code">
-                        <svg class="copy-icon" viewBox="0 0 24 24">
-                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="terminal-text">
-                    <span class="prompt">$</span>
-                    <span id="code-to-copy"><span class="cmd">npx</span> <span class="arg">otekin</span></span>
-                    <span class="cursor"></span>
-                </div>
+      <!-- EDUCATION & SKILLS -->
+      <section class="grid-cell">
+        <h2 class="section-title">EDUCATION_</h2>
+        <ul class="raw-list">
+          <li>
+            <div class="year">22' - 27'</div>
+            <div class="details">
+              <span class="details-title">Bachelor of Laws (LLB)</span>
+              <span class="details-sub">Koç University</span>
             </div>
+          </li>
+          <li>
+            <div class="year">17' - 22'</div>
+            <div class="details">
+              <span class="details-title">High School</span>
+              <span class="details-sub">6 A-Grade GCSE's</span>
+            </div>
+          </li>
+        </ul>
 
+        <h2 class="section-title" style="margin-top: 3rem;">SKILLS_</h2>
+        <div class="skills-grid">
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Excel</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">UYAP</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Office Suite</span>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="grid-cell full-width" id="projects">
+        <h2 class="section-title">PROJECTS_</h2>
+        <div class="project-list">
+          
+          <div class="project-item">
+            <div class="proj-head">
+              <h3>SignLoop</h3>
+              <div class="proj-actions">
+                <a href="https://signloop.vercel.app" target="_blank">TRY</a>
+                <a href="https://github.com/omertekin2002/SignLoop" target="_blank">SRC</a>
+              </div>
+            </div>
+            <p class="proj-desc">Fullstack web app utilizing LLMs to point out potential risks in your contracts before signing.</p>
+          </div>
+
+          <div class="project-item">
+            <div class="proj-head">
+              <h3>word-to-udf</h3>
+              <div class="proj-actions">
+                <a href="https://omertekin2002.github.io/word-to-udf/" target="_blank">TRY</a>
+                <a href="https://github.com/omertekin2002/word-to-udf" target="_blank">SRC</a>
+              </div>
+            </div>
+            <p class="proj-desc">A web-based tool to convert Word documents into UDF format.</p>
+          </div>
+
+          <div class="project-item">
+            <div class="proj-head">
+              <h3>NoHUD</h3>
+              <div class="proj-actions">
+                <a href="https://github.com/omertekin2002/NoHUD" target="_blank">SRC</a>
+              </div>
+            </div>
+            <p class="proj-desc">A macOS utility that suppresses the volume/brightness HUD overlay when using media keys.</p>
+          </div>
+
+          <div class="project-item">
+            <div class="proj-head">
+              <h3>ngrok-proxy-llm</h3>
+              <div class="proj-actions">
+                <a href="https://github.com/omertekin2002/ngrok-proxy-llm" target="_blank">SRC</a>
+              </div>
+            </div>
+            <p class="proj-desc">A script to expose your local LLM API for external clients using ngrok. With Speech-to-Text support.</p>
+          </div>
 
         </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section class="grid-cell">
+        <h2 class="section-title">CERTS_</h2>
+        <ul class="raw-list">
+          <li>
+            <div class="year">2025</div>
+            <div class="details">
+              <span class="details-title">Microsoft Power BI Data Analyst</span>
+              <span class="details-sub">Microsoft</span>
+            </div>
+          </li>
+          <li>
+            <div class="year">2025</div>
+            <div class="details">
+              <span class="details-title">IELTS Academic (8.0/9.0)</span>
+            </div>
+          </li>
+          <li>
+            <div class="year">2024</div>
+            <div class="details">
+              <span class="details-title">SPL Düzey 1</span>
+              <span class="details-sub">Sermaye Piyasası Lisanslama</span>
+            </div>
+          </li>
+          <li>
+            <div class="year">2024</div>
+            <div class="details">
+              <span class="details-title">M&A, SPA & SHA of Joint Stock Companies</span>
+              <span class="details-sub">Koç University</span>
+            </div>
+          </li>
+          <li>
+            <div class="year">2023</div>
+            <div class="details">
+              <span class="details-title">YÖKDİL (95/100)</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="grid-cell" id="contact">
+        <h2 class="section-title">BOOK_MEETING</h2>
+        <div class="contact-container">
+          <iframe 
+            src="https://forms.office.com/Pages/ResponsePage.aspx?id=ReLiKo2ONkCFb79qvSVWRJsSuHxDgNBCqhOIVVMUBb1UMk9TTE9HOVZUVk9ZVFNNNUEyS1E4U0JBTC4u&embed=true" 
+            frameborder="0" 
+            allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen loading="lazy" 
+            title="Book a Meeting form" aria-label="Book a Meeting form">
+          </iframe>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="grid-cell full-width footer-cell">
+        <div>© 2026 Ömer Tekin. ALL RIGHTS RESERVED.</div>
         <div class="social-links">
-            <a href="https://linkedin.com/in/%C3%B6mer-tekin" target="_blank" class="social-link liquid-btn"
-                aria-label="LinkedIn profile of Ömer Tekin">
-                <span class="social-icon">💼</span>
-                <span>LinkedIn</span>
-            </a>
+          <a href="https://www.linkedin.com/in/ömer-tekin" target="_blank" aria-label="LinkedIn">LINKEDIN</a>
+          <a href="https://github.com/omertekin2002" target="_blank" aria-label="GitHub">GITHUB</a>
         </div>
-    </div>
-</section>
+      </footer>
 
-
-
-<!-- CV Section -->
-<section id="cv" class="section">
-    <div class="container">
-        <h2>Experience & Skills</h2>
-        <div class="cv-grid">
-            <div class="cv-column left-col">
-                <div class="cv-card education">
-                    <h3>Education</h3>
-                    <div class="cv-item">
-                        <h4>Bachelor of Laws (LLB)</h4>
-                        <p>Koç University, 2022–2027</p>
-                    </div>
-                    <div class="cv-item">
-                        <h4>High School</h4>
-                        <p>6 A-Grade GCSE's taken, 2017-2022</p>
-                    </div>
-                </div>
-
-                <div class="cv-card skills">
-                    <h3>Skills</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">Microsoft Power BI</span>
-                        <span class="skill-tag">Excel</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">UYAP</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Office Suite</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right-col">
-                <div class="cv-card experience">
-                    <h3>Experience</h3>
-                    <div class="cv-item">
-                        <h4>Summer Intern</h4>
-                        <p class="company">Çakmak Attorney Partnership — September 2025</p>
-                    </div>
-                    <div class="cv-item">
-                        <h4>Summer Intern</h4>
-                        <p class="company">Bezen Attorney Partnership — August 2025</p>
-                    </div>
-                    <div class="cv-item">
-                        <h4>Intern</h4>
-                        <p class="company">Ak & Daniş Attorney Partnership — January 2025</p>
-                    </div>
-                    <div class="cv-item">
-                        <h4>Participant & Oralist</h4>
-                        <p class="company">Frankfurt Investment Arbitration Moot Court — September 2024 – June 2025</p>
-                    </div>
-                    <div class="cv-item">
-                        <h4>Intern</h4>
-                        <p class="company">DNPartners — October 2024 – November 2024</p>
-                    </div>
-                    <div class="cv-item">
-                        <h4>Tutor</h4>
-                        <p class="company">Koç University Office of Teaching and Learning (Python) — October 2023 –
-                            January 2024</p>
-                    </div>
-                </div>
-
-                <div class="cv-card certifications">
-                    <h3>Certifications</h3>
-                    <div class="cv-item">
-                        <h4>SPL Düzey 1</h4>
-                        <p class="company">Sermaye Piyasası Lisanslama Sicil ve Eğitim Kuruluşu A.Ş. (2024)</p>
-                    </div>
-                    <div class="cv-item">
-                        <h4>Microsoft Power BI Data Analyst</h4>
-                        <p class="company">Microsoft (2025)</p>
-                    </div>
-                    <div class="cv-item">
-                        <h4>IELTS Academic</h4>
-                        <p class="company">8.0/9.0 — (2025)</p>
-                    </div>
-                    <div class="cv-item">
-                        <h4>Mergers and Acquisitions, Share Purchase Agreements and Shareholders Agreements of Joint
-                            Stock Companies</h4>
-                        <p class="company">Koç University (2024)</p>
-                    </div>
-                    <div class="cv-item">
-                        <h4>YÖKDİL</h4>
-                        <p class="company">95/100 — (2023)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
-
-
-
-<!-- Projects Section -->
-<section id="projects" class="section">
-    <div class="container">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <!-- SignLoop Project Card -->
-            <div class="project-card">
-                <!-- Header: GitHub logo + repo name -->
-                <div class="project-header">
-                    <svg class="github-logo" viewBox="0 0 24 24" width="32" height="32">
-                        <path fill="currentColor"
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                    <h3 class="project-name">SignLoop</h3>
-                </div>
-
-                <!-- Description -->
-                <p class="project-description">A fullstack web app utilizing LLMs to point out potential risks in your
-                    contracts before signing.</p>
-
-                <!-- Footer with buttons -->
-                <div class="project-footer">
-                    <div class="project-actions">
-                        <a href="https://signloop.vercel.app" target="_blank" rel="noopener" class="project-btn try-it">
-                            Try it
-                        </a>
-                        <a href="https://github.com/omertekin2002/SignLoop" target="_blank" rel="noopener"
-                            class="project-btn view-project">
-                            View Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <!-- Header: GitHub logo + repo name -->
-                <div class="project-header">
-                    <svg class="github-logo" viewBox="0 0 24 24" width="32" height="32">
-                        <path fill="currentColor"
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                    <h3 class="project-name">word-to-udf</h3>
-                </div>
-
-                <!-- Description -->
-                <p class="project-description">A web-based tool to convert Word documents into UDF format.</p>
-
-
-                <!-- Footer with buttons -->
-                <div class="project-footer">
-                    <div class="project-actions">
-                        <a href="https://omertekin2002.github.io/word-to-udf/" target="_blank" rel="noopener"
-                            class="project-btn try-it">
-                            Try it
-                        </a>
-                        <a href="https://github.com/omertekin2002/word-to-udf" target="_blank" rel="noopener"
-                            class="project-btn view-project">
-                            View Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- NoHUD Project Card -->
-            <div class="project-card">
-                <!-- Header: GitHub logo + repo name -->
-                <div class="project-header">
-                    <svg class="github-logo" viewBox="0 0 24 24" width="32" height="32">
-                        <path fill="currentColor"
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                    <h3 class="project-name">NoHUD</h3>
-                </div>
-
-                <!-- Description -->
-                <p class="project-description">A macOS utility that suppresses the volume/brightness HUD overlay when
-                    using media keys.</p>
-
-
-                <!-- Footer with buttons -->
-                <div class="project-footer">
-                    <div class="project-actions">
-                        <a href="https://github.com/omertekin2002/NoHUD" target="_blank" rel="noopener"
-                            class="project-btn view-project">
-                            View Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ngrok-proxy-llm Project Card -->
-            <div class="project-card">
-                <!-- Header: GitHub logo + repo name -->
-                <div class="project-header">
-                    <svg class="github-logo" viewBox="0 0 24 24" width="32" height="32">
-                        <path fill="currentColor"
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                    <h3 class="project-name">ngrok-proxy-llm</h3>
-                </div>
-
-                <!-- Description -->
-                <p class="project-description">A simple script to expose your local LLM API for external clients using
-                    ngrok. Now with Speech-to-Text support</p>
-
-                <!-- Footer with buttons -->
-                <div class="project-footer">
-                    <div class="project-actions">
-                        <a href="https://github.com/omertekin2002/ngrok-proxy-llm" target="_blank" rel="noopener"
-                            class="project-btn view-project">
-                            View Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<!-- Contact/Form Section -->
-<section id="contact" class="section">
-    <div class="container">
-        <div class="form-container">
-            <h3 class="form-title">Book a Meeting</h3>
-            <iframe width="640px" height="480px"
-                src="https://forms.office.com/Pages/ResponsePage.aspx?id=ReLiKo2ONkCFb79qvSVWRJsSuHxDgNBCqhOIVVMUBb1UMk9TTE9HOVZUVk9ZVFNNNUEyS1E4U0JBTC4u&embed=true"
-                frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh"
-                allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen loading="lazy"
-                title="Book a Meeting form" aria-label="Book a Meeting form"></iframe>
-        </div>
-    </div>
-</section>
+    </main>
+  </div>
 
   <!-- Mobile Navigation Overlay -->
   <div class="mobile-nav-overlay">
     <ul class="mobile-nav-links">
       <li><a href="/assets/Omer%20Tekin%20CV%20n.pdf" target="_blank">CV</a></li>
-      <li><a href="#contact" class="nav-btn-pill">Book a Meeting</a></li>
-      <li><button class="mobile-nav-btn theme-toggle-btn"><span class="icon">☀️</span></button></li>
+      <li><a href="#experience">EXPERIENCE</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+      <li><button class="mobile-nav-btn theme-toggle-btn"><span class="icon">☀️</span> TOGGLE THEME</button></li>
     </ul>
   </div>
 
+  <!-- Scripts -->
   <script src="/assets/js/geometric-float.js"></script>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/ömer-tekin" target="_blank" aria-label="LinkedIn" class="social-icon">
-          <img src="/assets/img/linkedin.svg" alt="LinkedIn" />
-        </a>
-        <a href="https://github.com/omertekin2002" target="_blank" aria-label="GitHub" class="social-icon">
-          <img src="/assets/img/github.svg" alt="GitHub" />
-        </a>
-      </div>
-      <p class="copyright">© 2025 Ömer Tekin.</p>
-    </div>
-  </footer>
-
   <script src="/assets/js/kinetic-type.js"></script>
   <script src="/assets/js/theme-toggle.js"></script>
   <script src="/assets/js/mobile-nav.js"></script>
   <script src="/assets/js/clipboard.js"></script>
 </body>
-
 </html>
