@@ -593,7 +593,7 @@ iframe {
 
 .mobile-nav-links {
   list-style: none;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   padding: 0;
   font-family: var(--font-mono);
@@ -605,14 +605,15 @@ iframe {
 }
 
 .mobile-nav-links a {
-  -webkit-text-stroke: 1px var(--fg);
-  color: transparent;
-  transition: color 0.2s;
+  color: var(--fg);
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+  padding: 0.2rem 0;
 }
 
 .mobile-nav-links a:hover {
-  color: var(--fg);
-  background: transparent;
+  background: var(--fg);
+  color: var(--bg);
 }
 
 .mobile-nav-btn {
