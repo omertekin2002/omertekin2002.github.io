@@ -1,0 +1,5 @@
+{
+  "setup-worktree-unix": [
+    "echo 'Static site — no build dependencies. Ready to go.'"
+  ]
+}
