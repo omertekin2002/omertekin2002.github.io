@@ -482,6 +482,7 @@ p {
 
 .form-frame {
   border: 1px solid var(--ink);
+  box-shadow: var(--bevel);
 }
 
 .form-frame iframe {
