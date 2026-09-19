@@ -119,17 +119,11 @@ a:hover {
 .grid-cell {
   padding: 2.5rem;
   border-bottom: var(--rule) solid var(--border);
-  border-right: var(--rule) solid var(--border);
   position: relative;
-}
-
-.grid-cell:nth-child(even) {
-  border-right: none;
 }
 
 .full-width {
   grid-column: 1 / -1;
-  border-right: none;
 }
 
 /* Hero Section */
@@ -138,7 +132,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 8rem 4rem;
+  padding: 5rem 4rem;
   overflow: hidden;
   background: repeating-linear-gradient(45deg,
       transparent,
@@ -154,7 +148,7 @@ a:hover {
 
 .hero-content h1 {
   font-family: var(--font-serif);
-  font-size: clamp(4rem, 12vw, 12rem);
+  font-size: clamp(3.5rem, 9vw, 9rem);
   line-height: 0.88;
   margin: 0;
   font-weight: 500;
@@ -169,7 +163,7 @@ a:hover {
 
 /* NPX Block */
 .npx-box {
-  margin-top: 3rem;
+  margin-top: 2.25rem;
   border: var(--rule) solid var(--border);
   background: var(--bg);
   position: relative;
@@ -445,7 +439,6 @@ iframe {
 
 /* Footer */
 .footer-cell {
-  border-right: none;
   border-bottom: none;
   padding: 1.5rem 2.5rem;
   font-size: 0.8rem;
@@ -534,10 +527,6 @@ iframe {
 @media (max-width: 900px) {
   .content-grid {
     grid-template-columns: 1fr;
-  }
-
-  .grid-cell {
-    border-right: none;
   }
 }
 
