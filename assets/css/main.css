@@ -3,6 +3,7 @@
   --fg: #111111;
   --border: #111111;
   --accent: #e61919;
+  --accent-secondary: #0033ff;
   --rule: 3px;
   --hair: 1px;
   --font-mono: 'Space Mono', monospace;
@@ -139,6 +140,11 @@ a:hover {
   align-items: flex-start;
   padding: 8rem 4rem;
   overflow: hidden;
+  background: repeating-linear-gradient(45deg,
+      transparent,
+      transparent 10px,
+      rgba(0, 0, 0, 0.02) 10px,
+      rgba(0, 0, 0, 0.02) 20px);
 }
 
 .hero-content {
@@ -158,6 +164,7 @@ a:hover {
 .magnetic-char {
   display: inline-block;
   cursor: crosshair;
+  transition: color 0.2s;
 }
 
 /* NPX Block */
@@ -171,14 +178,25 @@ a:hover {
 
 .npx-header {
   border-bottom: var(--rule) solid var(--border);
-  padding: 0.4rem 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  font-weight: bold;
+  padding: 0.6rem 1rem;
   background: var(--fg);
-  color: var(--bg);
   display: flex;
-  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.win-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f57;
+}
+
+.win-btn:nth-child(2) {
+  background: #febc2e;
+}
+
+.win-btn:nth-child(3) {
+  background: #28c840;
 }
 
 .npx-body {
