@@ -44,7 +44,7 @@ function initMagneticText() {
                 const dy = (mouseY - charY) * strength * 0.3;
 
                 char.style.transform = `translate(${dx}px, ${dy}px)`;
-                char.style.color = 'var(--accent-secondary)'; // Highlight color
+                char.style.color = 'var(--accent)'; // Highlight color
             } else {
                 char.style.transform = 'translate(0, 0)';
                 char.style.color = ''; // Reset color
