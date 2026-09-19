@@ -6,10 +6,12 @@ function copyCode() {
     navigator.clipboard.writeText(codeText).then(() => {
         // Visual feedback using the button's tooltip
         button.classList.add('copied');
+        button.textContent = 'COPIED!';
         
         // Reset after 2 seconds
         setTimeout(() => {
             button.classList.remove('copied');
+            button.textContent = 'COPY';
         }, 2000);
     }).catch(err => {
         console.error('Failed to copy text: ', err);

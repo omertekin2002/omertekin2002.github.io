@@ -23,283 +23,286 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=7" />
   <link rel="manifest" href="/assets/site.webmanifest" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Space+Mono:wght@400;700&display=swap"
-    rel="stylesheet">
-
-  <!-- Brutalist CSS -->
+  <!-- 1996 catalog styles: system fonts only, no webfonts -->
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body>
 
-  <div class="noise-overlay"></div>
+  <!-- Shared icon glyphs -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 32 32"><path d="M7 3h13l6 6v20H7z" fill="#fff" stroke="#000" stroke-width="2"/><path d="M20 3v6h6" fill="#fcc20f" stroke="#000" stroke-width="2"/><path d="M11 14h11M11 18h11M11 22h8" stroke="#000" stroke-width="2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 32 32"><rect x="3" y="7" width="26" height="18" fill="#fcc20f" stroke="#000" stroke-width="2"/><path d="M3 7l13 10L29 7" fill="none" stroke="#000" stroke-width="2"/></symbol>
+    <symbol id="i-in" viewBox="0 0 32 32"><rect x="3" y="3" width="26" height="26" fill="#8c9ae0" stroke="#000" stroke-width="2"/><path d="M9 13v10M9 9v1M14 23V13m0 4c0-3 2-4 4-4s4 1 4 4v6" fill="none" stroke="#000" stroke-width="2.5"/></symbol>
+    <symbol id="i-house" viewBox="0 0 32 32"><path d="M4 15L16 4l12 11" fill="none" stroke="#000" stroke-width="2"/><path d="M7 13v15h18V13" fill="#d77a7a" stroke="#000" stroke-width="2"/><rect x="13" y="19" width="6" height="9" fill="#fff" stroke="#000" stroke-width="2"/></symbol>
+    <symbol id="i-glasses" viewBox="0 0 32 32"><circle cx="9" cy="18" r="6" fill="#9ab6c8" stroke="#000" stroke-width="2"/><circle cx="23" cy="18" r="6" fill="#9ab6c8" stroke="#000" stroke-width="2"/><path d="M15 18h2M3 18l-1-6M29 18l1-6" stroke="#000" stroke-width="2"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 32 32"><path d="M20 4a7 7 0 0 0-6 10L4 24l4 4 10-10a7 7 0 0 0 10-6l-4 3-4-1-1-4z" fill="#c0d4a7" stroke="#000" stroke-width="2" stroke-linejoin="round"/></symbol>
+  </svg>
 
-  <div class="site-frame">
-    <!-- Navigation -->
-    <nav class="nav-bar">
-      <div class="nav-brand">
-        ÖMER TEKIN <span class="blink">_</span>
+  <div class="page-frame" id="top">
+
+    <!-- TOP BANNER -->
+    <header class="top-banner">
+      <div class="banner-id">
+        <a href="#top" class="wordmark">ÖMER TEKIN</a>
+        <p class="tagline">LAW. BUSINESS. SOFTWARE. ONLINE.</p>
       </div>
-      <div class="nav-links">
-        <a href="https://omertekin2002.github.io/resume/" target="_blank">[ CV ]</a>
-        <a href="#contact">[ CONTACT ]</a>
+      <div class="banner-right">
+        <a href="#contact" class="sticker-tab">BOOK <span class="stripe">a</span> MEETING</a>
+        <div class="phone-callout">
+          <span id="code-to-copy">$ npx otekin</span>
+          <button id="copyButton" onclick="copyCode()" aria-label="Copy npx otekin">COPY</button>
+        </div>
       </div>
-      <button class="mobile-menu-btn" aria-label="Toggle Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
+    </header>
 
-    <!-- Main Content Grid -->
-    <main class="content-grid">
+    <div class="layout">
 
-      <!-- HERO -->
-      <section class="grid-cell full-width hero-cell">
-        <div id="geo-float-container">
-          <div class="geo-shape pyramid">
-            <div class="face front"></div>
-            <div class="face back"></div>
-            <div class="face right"></div>
-            <div class="face left"></div>
-            <div class="face bottom"></div>
+      <!-- LEFT RAIL -->
+      <aside class="rail">
+        <nav class="icon-grid" aria-label="Quick links">
+          <a href="https://omertekin2002.github.io/resume/" target="_blank">
+            <svg aria-hidden="true"><use href="#i-doc"/></svg><span>CV</span>
+          </a>
+          <a href="#contact">
+            <svg aria-hidden="true"><use href="#i-mail"/></svg><span>CONTACT</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ömer-tekin" target="_blank">
+            <svg aria-hidden="true"><use href="#i-in"/></svg><span>LINKEDIN</span>
+          </a>
+          <a href="https://github.com/omertekin2002" target="_blank">
+            <svg aria-hidden="true" class="gh"><use href="#i-github"/></svg><span>GITHUB</span>
+          </a>
+        </nav>
+
+        <div class="cta-red">
+          <p>At <b>omertekin2002.github.io</b>, you'll find a law &amp; business student at Koç University who
+            builds practical software on the side &mdash; contract-risk checkers, LLM proxies, macOS utilities.</p>
+          <p>Read the record, try the projects, then <a href="#contact">book a meeting</a>. It's all online.</p>
+        </div>
+
+        <div class="seal-row">
+          <div class="cert-seal" aria-label="IELTS Academic 8.0 out of 9">
+            <span class="seal-top">IELTS</span>
+            <span class="seal-mid">8.0</span>
+            <span class="seal-bot">ACADEMIC</span>
+          </div>
+          <div class="cert-seal" aria-label="YÖKDİL 95 out of 100">
+            <span class="seal-top">YÖKDİL</span>
+            <span class="seal-mid">95</span>
+            <span class="seal-bot">/ 100</span>
           </div>
         </div>
 
-        <div class="hero-content">
-          <h1>Ömer Tekin</h1>
+        <div class="rail-box">
+          <h3 class="rail-title">SKILLS</h3>
+          <ul class="spec-list">
+            <li>Power BI</li>
+            <li>Excel</li>
+            <li>SQL</li>
+            <li>Python</li>
+          </ul>
         </div>
+      </aside>
 
-        <div class="npx-box">
-          <div class="npx-header" aria-hidden="true">
-            <span class="win-btn"></span>
-            <span class="win-btn"></span>
-            <span class="win-btn"></span>
-          </div>
-          <div class="npx-body">
-            <span class="prompt">$</span>
-            <span id="code-to-copy">npx otekin</span>
-            <button id="copyButton" onclick="copyCode()">COPY</button>
-          </div>
-        </div>
-      </section>
+      <!-- MAIN STACK -->
+      <main class="stack">
 
-      <!-- EXPERIENCE -->
-      <section class="grid-cell" id="experience">
-        <h2 class="section-title">EXPERIENCE</h2>
-        <ul class="raw-list">
-          <li>
-            <div class="year">Mar 2026 - Sep 2026</div>
-            <div class="details">
-              <span class="details-title">Strategic Planning Intern</span>
-              <span class="details-sub">Türkiye Wealth Fund</span>
-            </div>
-          </li>
-          <li>
-            <div class="year">Feb 2026 - Jun 2026</div>
-            <div class="details">
-              <span class="details-title">PARTICIPANT & ORALIST</span>
-              <span class="details-sub">Frankfurt Investment Arbitration Moot Court</span>
-            </div>
-          </li>
-          <li>
-            <div class="year">Sep 2025</div>
-            <div class="details">
-              <span class="details-title">Summer Intern</span>
-              <span class="details-sub">Çakmak Attorney Partnership</span>
-            </div>
-          </li>
-          <li>
-            <div class="year">Aug 2025</div>
-            <div class="details">
-              <span class="details-title">Summer Intern</span>
-              <span class="details-sub">Bezen Attorney Partnership</span>
-            </div>
-          </li>
-          <li>
-            <div class="year">Sep 2024 - Jun 2025</div>
-            <div class="details">
-              <span class="details-title">Participant & Oralist</span>
-              <span class="details-sub">Frankfurt Investment Arbitration Moot Court</span>
-            </div>
-          </li>
-          <li>
-            <div class="year">Oct 2024 - Nov 2024</div>
-            <div class="details">
-              <span class="details-title">Intern</span>
-              <span class="details-sub">DNPartners</span>
-            </div>
-          </li>
-          <li>
-            <div class="year">Oct 2023 - Jan 2024</div>
-            <div class="details">
-              <span class="details-title">Tutor (Python)</span>
-              <span class="details-sub">Koç University Office of Teaching and Learning</span>
-            </div>
-          </li>
-        </ul>
-      </section>
+        <section id="experience">
+          <h2 class="eyebrow tint-olive">EXPERIENCE</h2>
 
-      <!-- EDUCATION & SKILLS -->
-      <section class="grid-cell">
-        <h2 class="section-title">EDUCATION</h2>
-        <ul class="raw-list">
-          <li>
-            <div class="year">22' - 27'</div>
-            <div class="details">
-              <span class="details-title">BACHELOR OF LAWS (LLB) + DM Business Administration (BBA)</span>
-              <span class="details-sub">Koç University</span>
+          <article class="ribbon">
+            <h3 class="ribbon-title">STRATEGIC PLANNING INTERN</h3>
+            <div class="ribbon-body tint-steel">
+              <p>Türkiye Wealth Fund</p><span class="when">Mar 2026 &ndash; Sep 2026</span>
             </div>
-          </li>
-          <li>
-            <div class="year">17' - 22'</div>
-            <div class="details">
-              <span class="details-title">High School</span>
-              <span class="details-sub">6 A-Grade GCSE's</span>
+          </article>
+
+          <article class="ribbon">
+            <h3 class="ribbon-title">PARTICIPANT &amp; ORALIST</h3>
+            <div class="ribbon-body tint-periwinkle">
+              <p>Frankfurt Investment Arbitration Moot Court</p><span class="when">Feb 2026 &ndash; Jun 2026</span>
             </div>
-          </li>
-        </ul>
+          </article>
 
-        <h2 class="section-title" style="margin-top: 3rem;">SKILLS</h2>
-        <div class="skills-grid">
-          <span class="skill-tag">Power BI</span>
-          <span class="skill-tag">Excel</span>
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">Python</span>
-        </div>
-      </section>
+          <article class="ribbon">
+            <h3 class="ribbon-title">SUMMER INTERN</h3>
+            <div class="ribbon-body tint-sage">
+              <p>Çakmak Attorney Partnership</p><span class="when">Sep 2025</span>
+            </div>
+          </article>
 
-      <!-- PROJECTS -->
-      <section class="grid-cell full-width" id="projects">
-        <h2 class="section-title">PROJECTS</h2>
-        <div class="project-list">
+          <article class="ribbon">
+            <h3 class="ribbon-title">SUMMER INTERN</h3>
+            <div class="ribbon-body tint-sage">
+              <p>Bezen Attorney Partnership</p><span class="when">Aug 2025</span>
+            </div>
+          </article>
 
-          <div class="project-item">
-            <div class="proj-head">
-              <h3>SignLoop</h3>
-              <div class="proj-actions">
-                <a href="https://signloop.vercel.app" target="_blank">TRY</a>
-                <a href="https://github.com/omertekin2002/SignLoop" target="_blank" class="proj-src" aria-label="Source on GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+          <article class="ribbon">
+            <h3 class="ribbon-title">PARTICIPANT &amp; ORALIST</h3>
+            <div class="ribbon-body tint-periwinkle">
+              <p>Frankfurt Investment Arbitration Moot Court</p><span class="when">Sep 2024 &ndash; Jun 2025</span>
+            </div>
+          </article>
+
+          <article class="ribbon">
+            <h3 class="ribbon-title">INTERN</h3>
+            <div class="ribbon-body tint-sage">
+              <p>DNPartners</p><span class="when">Oct 2024 &ndash; Nov 2024</span>
+            </div>
+          </article>
+
+          <article class="ribbon">
+            <h3 class="ribbon-title">TUTOR (PYTHON)</h3>
+            <div class="ribbon-body tint-sky">
+              <p>Koç University Office of Teaching and Learning</p><span class="when">Oct 2023 &ndash; Jan 2024</span>
+            </div>
+          </article>
+        </section>
+
+        <section id="projects">
+          <h2 class="eyebrow tint-salmon">PROJECTS</h2>
+
+          <article class="ribbon has-notch">
+            <h3 class="ribbon-title">SIGNLOOP</h3>
+            <div class="ribbon-body tint-peach">
+              <p>Fullstack web app utilizing LLMs to point out potential risks in your contracts before signing.</p>
+              <div class="actions">
+                <a class="btn btn-primary" href="https://signloop.vercel.app" target="_blank">TRY IT</a>
+                <a class="btn btn-secondary" href="https://github.com/omertekin2002/SignLoop" target="_blank"><svg aria-hidden="true"><use href="#i-github"/></svg>SOURCE</a>
               </div>
             </div>
-            <p class="proj-desc">Fullstack web app utilizing LLMs to point out potential risks in your contracts before
-              signing.</p>
-          </div>
+            <div class="notch" aria-hidden="true"><span class="screen">§ ✓</span></div>
+            <span class="new-burst" aria-hidden="true">NEW!</span>
+          </article>
 
-          <div class="project-item">
-            <div class="proj-head">
-              <h3>ngrok-proxy-llm</h3>
-              <div class="proj-actions">
-                <a href="https://github.com/omertekin2002/ngrok-proxy-llm" target="_blank" class="proj-src" aria-label="Source on GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+          <article class="ribbon has-notch">
+            <h3 class="ribbon-title">NGROK-PROXY-LLM</h3>
+            <div class="ribbon-body tint-lime">
+              <p>A Python app to expose your local LLMs and CLI tools to the public. Now with non-headless and
+                speech-to-text support.</p>
+              <div class="actions">
+                <a class="btn btn-secondary" href="https://github.com/omertekin2002/ngrok-proxy-llm" target="_blank"><svg aria-hidden="true"><use href="#i-github"/></svg>SOURCE</a>
               </div>
             </div>
-            <p class="proj-desc">A python app to expose your Local LLMs and CLI tools to the public. Now with non-Headless and Speech-to-text support.</p>
-          </div>
+            <div class="notch" aria-hidden="true"><span class="screen">&gt;_</span></div>
+          </article>
 
-          <div class="project-item">
-            <div class="proj-head">
-              <h3>NoHUD</h3>
-              <div class="proj-actions">
-                <a href="https://github.com/omertekin2002/NoHUD" target="_blank" class="proj-src" aria-label="Source on GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+          <article class="ribbon has-notch">
+            <h3 class="ribbon-title">NOHUD</h3>
+            <div class="ribbon-body tint-sky">
+              <p>A macOS utility that suppresses the volume/brightness HUD overlay when using media keys.</p>
+              <div class="actions">
+                <a class="btn btn-secondary" href="https://github.com/omertekin2002/NoHUD" target="_blank"><svg aria-hidden="true"><use href="#i-github"/></svg>SOURCE</a>
               </div>
             </div>
-            <p class="proj-desc">A macOS utility that suppresses the volume/brightness HUD overlay when using media
-              keys.</p>
-          </div>
+            <div class="notch" aria-hidden="true"><span class="screen">◐</span></div>
+          </article>
 
-          <div class="project-item">
-            <div class="proj-head">
-              <h3>word-to-udf</h3>
-              <div class="proj-actions">
-                <a href="https://omertekin2002.github.io/word-to-udf/" target="_blank">TRY</a>
-                <a href="https://github.com/omertekin2002/word-to-udf" target="_blank" class="proj-src" aria-label="Source on GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+          <article class="ribbon has-notch">
+            <h3 class="ribbon-title">WORD-TO-UDF</h3>
+            <div class="ribbon-body tint-periwinkle">
+              <p>A web-based tool to convert Word documents into UDF format.</p>
+              <div class="actions">
+                <a class="btn btn-primary" href="https://omertekin2002.github.io/word-to-udf/" target="_blank">TRY IT</a>
+                <a class="btn btn-secondary" href="https://github.com/omertekin2002/word-to-udf" target="_blank"><svg aria-hidden="true"><use href="#i-github"/></svg>SOURCE</a>
               </div>
             </div>
-            <p class="proj-desc">A web-based tool to convert Word documents into UDF format.</p>
+            <div class="notch" aria-hidden="true"><span class="screen">W→U</span></div>
+          </article>
+        </section>
+
+        <section id="education">
+          <h2 class="eyebrow tint-olive">EDUCATION</h2>
+
+          <article class="ribbon">
+            <h3 class="ribbon-title">BACHELOR OF LAWS (LLB) + DM BUSINESS ADMINISTRATION (BBA)</h3>
+            <div class="ribbon-body tint-steel">
+              <p>Koç University</p><span class="when">2022 &ndash; 2027</span>
+            </div>
+          </article>
+
+          <article class="ribbon">
+            <h3 class="ribbon-title">HIGH SCHOOL</h3>
+            <div class="ribbon-body tint-steel">
+              <p>6 A-Grade GCSEs</p><span class="when">2017 &ndash; 2022</span>
+            </div>
+          </article>
+        </section>
+
+        <section id="certifications">
+          <h2 class="eyebrow tint-salmon">CERTIFICATIONS</h2>
+
+          <article class="ribbon">
+            <h3 class="ribbon-title">SPL DÜZEY 3 + TÜREV ARAÇLARI</h3>
+            <div class="ribbon-body tint-lime">
+              <p>Sermaye Piyasası Lisanslama A.Ş.</p><span class="when">2026</span>
+            </div>
+          </article>
+
+          <article class="ribbon">
+            <h3 class="ribbon-title">MICROSOFT POWER BI DATA ANALYST</h3>
+            <div class="ribbon-body tint-lime">
+              <p>Microsoft</p><span class="when">2025</span>
+            </div>
+          </article>
+
+          <article class="ribbon">
+            <h3 class="ribbon-title">IELTS ACADEMIC (8.0 / 9.0)</h3>
+            <div class="ribbon-body tint-sky">
+              <p>Overall band score 8.0</p><span class="when">2025</span>
+            </div>
+          </article>
+
+          <article class="ribbon">
+            <h3 class="ribbon-title">M&amp;A, SPA &amp; SHA OF JOINT STOCK COMPANIES</h3>
+            <div class="ribbon-body tint-sage">
+              <p>Koç University</p><span class="when">2024</span>
+            </div>
+          </article>
+
+          <article class="ribbon">
+            <h3 class="ribbon-title">YÖKDİL (95 / 100)</h3>
+            <div class="ribbon-body tint-sky">
+              <p>Score 95 out of 100</p><span class="when">2023</span>
+            </div>
+          </article>
+        </section>
+
+        <section id="contact">
+          <h2 class="eyebrow tint-olive">BOOK A MEETING</h2>
+          <div class="form-frame">
+            <iframe
+              src="https://forms.office.com/Pages/ResponsePage.aspx?id=ReLiKo2ONkCFb79qvSVWRJsSuHxDgNBCqhOIVVMUBb1UMk9TTE9HOVZUVk9ZVFNNNUEyS1E4U0JBTC4u&embed=true"
+              frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen loading="lazy"
+              title="Book a Meeting form" aria-label="Book a Meeting form">
+            </iframe>
           </div>
+        </section>
 
-        </div>
-      </section>
+      </main>
+    </div>
 
-      <!-- CERTIFICATIONS -->
-      <section class="grid-cell">
-        <h2 class="section-title">CERTIFICATIONS</h2>
-        <ul class="raw-list">
-          <li>
-            <div class="year">2026</div>
-            <div class="details">
-              <span class="details-title">SPL DÜZEY 3 + TÜREV ARAÇLARI</span>
-              <span class="details-sub">Sermaye Piyasası Lisanslama A.Ş.</span>
-            </div>
-          </li>
-          <li>
-            <div class="year">2025</div>
-            <div class="details">
-              <span class="details-title">Microsoft Power BI Data Analyst</span>
-              <span class="details-sub">Microsoft</span>
-            </div>
-          </li>
-          <li>
-            <div class="year">2025</div>
-            <div class="details">
-              <span class="details-title">IELTS Academic (8.0/9.0)</span>
-            </div>
-          </li>
-          <li>
-            <div class="year">2024</div>
-            <div class="details">
-              <span class="details-title">M&A, SPA & SHA of Joint Stock Companies</span>
-              <span class="details-sub">Koç University</span>
-            </div>
-          </li>
-          <li>
-            <div class="year">2023</div>
-            <div class="details">
-              <span class="details-title">YÖKDİL (95/100)</span>
-            </div>
-          </li>
-        </ul>
-      </section>
+    <!-- FOOTER -->
+    <footer class="footer-band">
+      <nav class="icon-nav" aria-label="Footer">
+        <a href="#top"><svg aria-hidden="true"><use href="#i-house"/></svg><span>HOME</span></a>
+        <a href="#projects"><svg aria-hidden="true"><use href="#i-glasses"/></svg><span>PROJECTS</span></a>
+        <a href="https://omertekin2002.github.io/resume/" target="_blank"><svg aria-hidden="true"><use href="#i-doc"/></svg><span>CV</span></a>
+        <a href="#contact"><svg aria-hidden="true"><use href="#i-wrench"/></svg><span>CONTACT</span></a>
+      </nav>
+      <p class="legal">
+        <a href="https://www.linkedin.com/in/ömer-tekin" target="_blank">LinkedIn</a> &middot;
+        <a href="https://github.com/omertekin2002" target="_blank">GitHub</a> &middot;
+        <a href="#top">Copyright</a> &copy; 2025 Ömer Tekin. All rights reserved.
+      </p>
+      <p class="small-print">This site is best viewed with browser versions 3.0 and higher.</p>
+    </footer>
 
-      <!-- CONTACT -->
-      <section class="grid-cell" id="contact">
-        <h2 class="section-title">BOOK A MEETING</h2>
-        <div class="contact-container">
-          <iframe
-            src="https://forms.office.com/Pages/ResponsePage.aspx?id=ReLiKo2ONkCFb79qvSVWRJsSuHxDgNBCqhOIVVMUBb1UMk9TTE9HOVZUVk9ZVFNNNUEyS1E4U0JBTC4u&embed=true"
-            frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen loading="lazy"
-            title="Book a Meeting form" aria-label="Book a Meeting form">
-          </iframe>
-        </div>
-      </section>
-
-      <!-- FOOTER -->
-      <footer class="grid-cell full-width footer-cell">
-        <div>© 2025 Ömer Tekin</div>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/ömer-tekin" target="_blank" aria-label="LinkedIn">LINKEDIN</a>
-          <a href="https://github.com/omertekin2002" target="_blank" aria-label="GitHub">GITHUB</a>
-        </div>
-      </footer>
-
-    </main>
   </div>
 
-  <!-- Mobile Navigation Overlay -->
-  <div class="mobile-nav-overlay">
-    <button class="mobile-close-btn" aria-label="Close Menu">×</button>
-    <ul class="mobile-nav-links">
-      <li><a href="https://omertekin2002.github.io/resume/" target="_blank">[ CV ]</a></li>
-      <li><a href="#contact">[ CONTACT ]</a></li>
-    </ul>
-  </div>
-
-  <!-- Scripts -->
-  <script src="/assets/js/geometric-float.js"></script>
-  <script src="/assets/js/kinetic-type.js"></script>
-  <script src="/assets/js/mobile-nav.js"></script>
   <script src="/assets/js/clipboard.js"></script>
 </body>
 

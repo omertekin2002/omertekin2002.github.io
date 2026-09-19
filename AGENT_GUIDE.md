@@ -24,7 +24,7 @@ The site is deployed to GitHub Pages via `.github/workflows/deploy.yml`. On push
 
 - `index.html` — The full site (single page)
 - `assets/css/main.css` — Styles
-- `assets/js/` — JavaScript files (mobile nav, clipboard, geometric float, kinetic type)
+- `assets/js/clipboard.js` — Copy button for the `npx otekin` callout
 - `assets/img/` — Images (social icons, etc.)
 - `favicon.*` — Favicon files
 - `robots.txt` / `sitemap.xml` — SEO files
