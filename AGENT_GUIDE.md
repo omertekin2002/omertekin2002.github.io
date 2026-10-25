@@ -18,7 +18,7 @@ The site will be available at `http://127.0.0.1:4000/`. Press `Ctrl+C` to stop.
 
 ## Deployment
 
-The site is deployed to GitHub Pages via `.github/workflows/deploy.yml`. On push to `main` or `Design-Experiments-Yeniden`, the workflow uploads the repo contents directly as a Pages artifact — no build step required.
+The site is deployed to GitHub Pages via `.github/workflows/deploy.yml`. On push to `main` (or a manual `workflow_dispatch` run), the workflow uploads the repo contents directly as a Pages artifact — no build step required.
 
 ## Project Structure
 
