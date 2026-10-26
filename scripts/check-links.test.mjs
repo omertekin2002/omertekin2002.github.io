@@ -103,6 +103,19 @@ describe("checkSite", () => {
     assert.deepEqual(problems, ['index.html:13: <a href="#contactx"> points at a missing id "contactx"']);
   });
 
+  for (const href of ["/#contactx", "index.html#contactx", "/index.html?v=8#contactx", "?v=8#contactx"]) {
+    it(`reports a dangling fragment on a URL that resolves to the same page (${href})`, () => {
+      const { problems } = checkSite(siteWith({ "index.html": PAGE.replace('href="#contact"', `href="${href}"`) }));
+      assert.deepEqual(problems, [`index.html:13: <a href="${href}"> points at a missing id "contactx"`]);
+    });
+  }
+
+  it("checks fragments against the other page they link to", () => {
+    const index = PAGE.replace('href="#contact"', 'href="/about/#team"').replace('href="#top"', 'href="about/#gone"');
+    const { problems } = checkSite(siteWith({ "index.html": index, "about/index.html": '<section id="team"></section>' }));
+    assert.deepEqual(problems, ['index.html:12: <a href="about/#gone"> points at a missing id "gone" in about/index.html']);
+  });
+
   it("reports an SVG <use> pointing at a missing symbol", () => {
     const { problems } = checkSite(siteWith({ "index.html": PAGE.replace('<use href="#i-doc"/>', '<use href="#i-nope"/>') }));
     assert.deepEqual(problems, ['index.html:18: <use href="#i-nope"> points at a missing id "i-nope"']);

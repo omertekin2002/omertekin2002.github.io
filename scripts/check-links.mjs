@@ -127,13 +127,21 @@ export function checkSite(root, { pages = ["index.html"], origin = SITE_ORIGIN, 
     if (!result.file) problems.push(`${where}: ${label} ${result.reason}`);
   };
 
+  const idCache = new Map();
+  const idsOf = (file) => {
+    if (!idCache.has(file)) {
+      const tags = parseTags(readFileSync(path.join(root, file), "utf8"));
+      idCache.set(file, new Set(tags.filter((tag) => tag.attrs.has("id")).map((tag) => tag.attrs.get("id"))));
+    }
+    return idCache.get(file);
+  };
+
   for (const page of pages) {
     if (!fileExists(page)) {
       problems.push(`${page}: page not found`);
       continue;
     }
     const tags = parseTags(readFileSync(path.join(root, page), "utf8"));
-    const ids = new Set(tags.filter((tag) => tag.attrs.has("id")).map((tag) => tag.attrs.get("id")));
 
     for (const tag of tags) {
       for (const attr of ["href", "src", "xlink:href"]) {
@@ -141,20 +149,31 @@ export function checkSite(root, { pages = ["index.html"], origin = SITE_ORIGIN, 
         if (url === undefined || isExternal(url)) continue;
         const where = `${page}:${tag.line}`;
         const label = `<${tag.name} ${attr}="${url}">`;
+        checked += 1;
 
-        if (url.startsWith("#")) {
-          checked += 1;
-          let id = url.slice(1);
+        // "#x" and "?v=1#x" stay on this page; anything else must resolve to a file.
+        const { pathname, fragment } = splitUrl(url);
+        let file = page;
+        if (pathname !== "") {
+          const result = resolveLocal(pathname, page);
+          if (!result.file) {
+            problems.push(`${where}: ${label} ${result.reason}`);
+            continue;
+          }
+          file = result.file;
+        }
+
+        if (fragment && /\.html?$/i.test(file)) {
+          let id = fragment;
           try {
             id = decodeURIComponent(id);
           } catch {}
-          if (id !== "" && !ids.has(id)) problems.push(`${where}: ${label} points at a missing id "${id}"`);
-          continue;
+          const inFile = file === page ? "" : ` in ${file}`;
+          if (!idsOf(file).has(id)) problems.push(`${where}: ${label} points at a missing id "${id}"${inFile}`);
         }
 
-        const file = checkLocal(where, label, url, page);
         const isManifest = tag.name === "link" && /(^|\s)manifest(\s|$)/i.test(tag.attrs.get("rel") ?? "");
-        if (file && isManifest) checkManifest(file);
+        if (pathname !== "" && isManifest) checkManifest(file);
       }
     }
   }
