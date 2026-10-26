@@ -1,0 +1,11 @@
+{
+  "name": "omertekin2002.github.io",
+  "private": true,
+  "scripts": {
+    "check": "html-validate index.html && node scripts/check-links.mjs && node --test scripts/check-links.test.mjs",
+    "test": "node --test scripts/check-links.test.mjs"
+  },
+  "devDependencies": {
+    "html-validate": "11.17.0"
+  }
+}
