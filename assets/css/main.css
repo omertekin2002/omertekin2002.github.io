@@ -103,11 +103,6 @@ p {
   color: var(--white);
 }
 
-.tagline {
-  margin-top: 6px;
-  font: 700 16px/1.2 var(--font-ui);
-}
-
 .banner-right {
   display: flex;
   flex-direction: column;
@@ -587,10 +582,6 @@ p {
 
   .wordmark {
     font-size: 28px;
-  }
-
-  .tagline {
-    font-size: 14px;
   }
 }
 
